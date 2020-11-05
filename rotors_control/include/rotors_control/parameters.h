@@ -3,12 +3,15 @@
 
 namespace rotors_control {
 // Default values for the Asctec Firefly rotor configuration.
-static constexpr double kDefaultRotor0Angle = 0.52359877559;
-static constexpr double kDefaultRotor1Angle = 1.57079632679;
+static constexpr double kDefaultRotor0AngleTheta = 0.52359877559;
+static constexpr double kDefaultRotor1AngleTheta = 1.57079632679;
 static constexpr double kDefaultRotor2Angle = 2.61799387799;
 static constexpr double kDefaultRotor3Angle = -2.61799387799;
-static constexpr double kDefaultRotor4Angle = -1.57079632679;
-static constexpr double kDefaultRotor5Angle = -0.52359877559;
+
+static constexpr double kDefaultRotor0AngleTheta = 0.52359877559;
+static constexpr double kDefaultRotor1AngleTheta = 1.57079632679;
+static constexpr double kDefaultRotor2Angle = 2.61799387799;
+static constexpr double kDefaultRotor3Angle = -2.61799387799;
 
 // Default vehicle parameters for Asctec Firefly.
 static constexpr double kDefaultMass = 1.56779;
@@ -24,20 +27,23 @@ static constexpr double kDefaultGravity = 9.81;
 
 struct Rotor {
   Rotor()
-      : angle(0.0),
+      : angle_theta(0.0),
+        angle_phi(0.0),
         arm_length(kDefaultArmLength),
         rotor_force_constant(kDefaultRotorForceConstant),
         rotor_moment_constant(kDefaultRotorMomentConstant),
         direction(1) {}
-  Rotor(double _angle, double _arm_length,
+  Rotor(double _angle_theta, double _angle_phi, double _arm_length,
         double _rotor_force_constant, double _rotor_moment_constant,
         int _direction)
-      : angle(_angle),
+      : angle_theta(_angle_theta),
+        angle_phi(_angle_phi),
         arm_length(_arm_length),
         rotor_force_constant(_rotor_force_constant),
         rotor_moment_constant(_rotor_moment_constant),
         direction(_direction) {}
-  double angle;
+  double angle_theta;
+  double angle_phi
   double arm_length;
   double rotor_force_constant;
   double rotor_moment_constant;
@@ -46,15 +52,15 @@ struct Rotor {
 
 struct RotorConfiguration {
   RotorConfiguration() {
-    // Rotor configuration of Asctec Firefly.
+    // Rotor configuration with two angles.
     rotors.push_back(
-      Rotor(kDefaultRotor0Angle, kDefaultArmLength, kDefaultRotorForceConstant,
+      Rotor(kDefaultRotor0AngleTheta, kDefaultRotor0AnglePhi, kDefaultArmLength, kDefaultRotorForceConstant,
             kDefaultRotorMomentConstant, 1));
     rotors.push_back(
-      Rotor(kDefaultRotor1Angle, kDefaultArmLength, kDefaultRotorForceConstant,
+      Rotor(kDefaultRotor1Angle, kDefaultRotor1AnglePhi, kDefaultArmLength, kDefaultRotorForceConstant,
             kDefaultRotorMomentConstant, -1));
     rotors.push_back(
-      Rotor(kDefaultRotor2Angle, kDefaultArmLength, kDefaultRotorForceConstant,
+      Rotor(kDefaultRotor2Angle, kDefaultRotoAnglePhi, kDefaultArmLength, kDefaultRotorForceConstant,
             kDefaultRotorMomentConstant, 1));
     rotors.push_back(
       Rotor(kDefaultRotor3Angle, kDefaultArmLength, kDefaultRotorForceConstant,

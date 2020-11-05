@@ -91,7 +91,7 @@ inline void calculateAllocationMatrix(const RotorConfiguration& rotor_configurat
     // Set third row of allocation matrix.
     (*allocation_matrix)(2, i) = -rotor.direction * rotor.rotor_force_constant
                                  * rotor.rotor_moment_constant;
-    // Set forth row of allocation matrix.
+    // Set fourth row of allocation matrix.
     (*allocation_matrix)(3, i) = rotor.rotor_force_constant;
     ++i;
   }

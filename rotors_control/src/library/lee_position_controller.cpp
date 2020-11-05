@@ -110,6 +110,37 @@ void LeePositionController::ComputeDesiredAcceleration(Eigen::Vector3d* accelera
       - vehicle_parameters_.gravity_ * e_3 - command_trajectory_.acceleration_W;
 }
 
+void LeePositionController::ComputeForce(Eigen::Vector3d* force) const {
+    Eigen::Vector3d position_error;
+    position_error = odometry_.position - command_trajectory_.position_W;
+
+    const Eigen::Matrix3d R_W_I = odometry_.orientation.toRotationMatrix();
+    Eigen::Vector3d velocity_W =  R_W_I * odometry_.velocity;
+    Eigen::Vector3d velocity_error;
+    velocity_error = velocity_W - command_trajectory_.velocity_W;
+
+    Eigen::Vector3d g;
+    g << 0, 0, -vehicle_parameters_.gravity_;
+
+    Eigen::Vector3d omega_b = odometry_.angular_velocity;
+
+    *force = vehicle_parameters_.mass_ * (R_W_I.transpose() * controller_parameters_.position_gain_ * position_error
+            - controller_parameters_.velocity_gain_ * velocity_error + comman_trajectory_.acceleration_W
+            + omega_b.cross((R_W_I.transpose() * odometry_.velocity)));
+}
+
+void LeePositonController::ComputeTorque(Eigen::Vector3d* torque) const {
+    inertia = vehicle_parameters_.inertia_;
+    rotational_error = ;
+
+
+    Eigen::Matrix3d R = odometry_.orientation.toRotationMatrix();
+    Eigen::Matrix3d R_sp = command_trajectory_._orientation.toRotationMatrix();
+    Eigen::Matrix3d angle_error_matrix = 0.5 * (R_sp.transpose() * R - R.transpose() * R_sp);
+    Eigen::Vector3d angular_rate_error = odometry_.angular_velocity - R_sp.transpose() * R * angular_rate_des;
+
+}
+
 // Implementation from the T. Lee et al. paper
 // Control of complex maneuvers for a quadrotor UAV using geometric methods on SE(3)
 void LeePositionController::ComputeDesiredAngularAcc(const Eigen::Vector3d& acceleration,
