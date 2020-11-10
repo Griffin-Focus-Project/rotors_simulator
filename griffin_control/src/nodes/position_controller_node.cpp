@@ -7,13 +7,15 @@
 #include <ros/ros.h>
 
 namespace griffin_control {
-    PositionControllerNode::PositionControllerNode(const ros::NodeHandle &nh, const ros::NodeHandle &private_nh)
+    PositionControllerNode::PositionControllerNode(const ros::NodeHandle& nh, const ros::NodeHandle& private_nh)
             : nh_(nh),
               private_nh_(private_nh) {
 
         odometry_sub_ = nh_.subscribe(mav_msgs::default_topics::ODOMETRY, 1,
                                       &LeePositionControllerNode::OdometryCallback, this);
     }
+
+    PositionControllerNode::~PositionControllerNode() { }
 
 
     void PositionControllerNode::OdometryCallback(const nav_msgs::OdometryConstPtr& odometry_msg) {
@@ -38,10 +40,6 @@ namespace griffin_control {
         */
     }
 
-    void LeePositionControllerNode::Publish() {
-    }
-
-}
 
 
 
