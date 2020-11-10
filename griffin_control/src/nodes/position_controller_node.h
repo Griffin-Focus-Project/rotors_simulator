@@ -12,8 +12,8 @@
 #include <boost/bind.hpp>
 #include <stdio.h>
 
+#include <rotors_control/common.h>
 #include "griffin_control/position_controller.h"
-#include "griffin_control/common.h"
 
 
 namespace griffin_control {

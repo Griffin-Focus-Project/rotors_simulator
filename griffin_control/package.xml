@@ -55,6 +55,7 @@
   <depend>Eigen3</depend>
   <depend>cmake_modules</depend>
   <depend>dynamic_reconfigure</depend>
+  <depend>rotors_control</depend>
 
   <!-- The export tag contains other, unspecified, tags -->
   <export>

@@ -12,6 +12,7 @@ find_package(catkin REQUIRED COMPONENTS
         mav_msgs
         nav_msgs
         cmake_modules
+        rotors_control
 )
 
 find_package(Eigen3 REQUIRED)

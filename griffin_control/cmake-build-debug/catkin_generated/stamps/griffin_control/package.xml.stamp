@@ -53,7 +53,8 @@
   <depend>mav_msgs</depend>
   <depend>nav_msgs</depend>
   <depend>Eigen3</depend>
-
+  <depend>cmake_modules</depend>
+  <depend>dynamic_reconfigure</depend>
 
   <!-- The export tag contains other, unspecified, tags -->
   <export>
