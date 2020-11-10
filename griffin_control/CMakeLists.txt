@@ -8,8 +8,13 @@ project(griffin_control)
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
-  roscpp
+        roscpp
+        mav_msgs
+        nav_msgs
+        cmake_modules
 )
+
+find_package(Eigen3 REQUIRED)
 
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
@@ -101,10 +106,10 @@ find_package(catkin REQUIRED COMPONENTS
 ## CATKIN_DEPENDS: catkin_packages dependent projects also need
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
-#  INCLUDE_DIRS include
-#  LIBRARIES griffin_control
-#  CATKIN_DEPENDS roscpp
-#  DEPENDS system_lib
+  INCLUDE_DIRS include ${EIGEN3_INCLUDE_DIRS}
+  LIBRARIES position_controller
+  CATKIN_DEPENDS roscpp mav_msgs nav_msgs
+  DEPENDS Eigen3
 )
 
 ###########
@@ -114,14 +119,19 @@ catkin_package(
 ## Specify additional locations of header files
 ## Your package locations should be listed before other locations
 include_directories(
-# include
-  ${catkin_INCLUDE_DIRS}
+        ${catkin_INCLUDE_DIRS}
+        ${EIGEN3_INCLUDE_DIRS}
+
 )
 
 ## Declare a C++ library
 # add_library(${PROJECT_NAME}
 #   src/${PROJECT_NAME}/griffin_control.cpp
 # )
+
+add_library(position_controller
+        src/library/position_controller.cpp
+        )
 
 ## Add cmake target dependencies of the library
 ## as an example, code may need to be generated before libraries
@@ -148,6 +158,14 @@ include_directories(
 #   ${catkin_LIBRARIES}
 # )
 
+target_link_libraries(position_controller ${catkin_LIBRARIES})
+add_dependencies(position_controller ${catkin_EXPORTED_TARGETS})
+
+
+add_executable(position_controller_node src/nodes/position_controller_node.cpp)
+add_dependencies(position_controller_node ${catkin_EXPORTED_TARGETS})
+target_link_libraries(position_controller_node
+        position_controller ${catkin_LIBRARIES})
 #############
 ## Install ##
 #############
@@ -155,6 +173,21 @@ include_directories(
 # all install targets should use catkin DESTINATION variables
 # See http://ros.org/doc/api/catkin/html/adv_user_guide/variables.html
 
+install(TARGETS position_controller
+        LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+        )
+
+install(TARGETS position_controller_node
+        ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+        LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+        RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+        )
+
+install(
+        DIRECTORY include/${PROJECT_NAME}/
+        DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION}
+        FILES_MATCHING PATTERN "*.h"
+)
 ## Mark executable scripts (Python etc.) for installation
 ## in contrast to setup.py, you can choose the destination
 # catkin_install_python(PROGRAMS
