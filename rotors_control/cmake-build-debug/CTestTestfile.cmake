@@ -1,6 +1,6 @@
 # CMake generated Testfile for 
-# Source directory: /home/martin/catkin_ws/src/rotors_simulator/rotors_control
-# Build directory: /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug
+# Source directory: /home/griffin/catkin_ws/src/rotors_simulator/rotors_control
+# Build directory: /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug
 # 
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.

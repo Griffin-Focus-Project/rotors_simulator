@@ -63,10 +63,10 @@ RM = /snap/clion/129/bin/cmake/linux/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/martin/catkin_ws/src/rotors_simulator/rotors_control
+CMAKE_SOURCE_DIR = /home/griffin/catkin_ws/src/rotors_simulator/rotors_control
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug
+CMAKE_BINARY_DIR = /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug
 
 # Utility rule file for clean_test_results.
 
@@ -74,7 +74,7 @@ CMAKE_BINARY_DIR = /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cm
 include CMakeFiles/clean_test_results.dir/progress.make
 
 CMakeFiles/clean_test_results:
-	/usr/bin/python2 /opt/ros/melodic/share/catkin/cmake/test/remove_test_results.py /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/test_results
+	/usr/bin/python2 /opt/ros/melodic/share/catkin/cmake/test/remove_test_results.py /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/test_results
 
 clean_test_results: CMakeFiles/clean_test_results
 clean_test_results: CMakeFiles/clean_test_results.dir/build.make
@@ -91,6 +91,6 @@ CMakeFiles/clean_test_results.dir/clean:
 .PHONY : CMakeFiles/clean_test_results.dir/clean
 
 CMakeFiles/clean_test_results.dir/depend:
-	cd /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/martin/catkin_ws/src/rotors_simulator/rotors_control /home/martin/catkin_ws/src/rotors_simulator/rotors_control /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles/clean_test_results.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/griffin/catkin_ws/src/rotors_simulator/rotors_control /home/griffin/catkin_ws/src/rotors_simulator/rotors_control /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles/clean_test_results.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/clean_test_results.dir/depend
 
