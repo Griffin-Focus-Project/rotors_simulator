@@ -63,10 +63,10 @@ RM = /snap/clion/129/bin/cmake/linux/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/griffin/catkin_ws/src/rotors_simulator/rotors_control
+CMAKE_SOURCE_DIR = /home/martin/catkin_ws/src/rotors_simulator/rotors_control
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug
+CMAKE_BINARY_DIR = /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/roll_pitch_yawrate_thrust_controller.dir/depend.make
@@ -79,16 +79,16 @@ include CMakeFiles/roll_pitch_yawrate_thrust_controller.dir/flags.make
 
 CMakeFiles/roll_pitch_yawrate_thrust_controller.dir/src/library/roll_pitch_yawrate_thrust_controller.cpp.o: CMakeFiles/roll_pitch_yawrate_thrust_controller.dir/flags.make
 CMakeFiles/roll_pitch_yawrate_thrust_controller.dir/src/library/roll_pitch_yawrate_thrust_controller.cpp.o: ../src/library/roll_pitch_yawrate_thrust_controller.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/roll_pitch_yawrate_thrust_controller.dir/src/library/roll_pitch_yawrate_thrust_controller.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/roll_pitch_yawrate_thrust_controller.dir/src/library/roll_pitch_yawrate_thrust_controller.cpp.o -c /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/src/library/roll_pitch_yawrate_thrust_controller.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/roll_pitch_yawrate_thrust_controller.dir/src/library/roll_pitch_yawrate_thrust_controller.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/roll_pitch_yawrate_thrust_controller.dir/src/library/roll_pitch_yawrate_thrust_controller.cpp.o -c /home/martin/catkin_ws/src/rotors_simulator/rotors_control/src/library/roll_pitch_yawrate_thrust_controller.cpp
 
 CMakeFiles/roll_pitch_yawrate_thrust_controller.dir/src/library/roll_pitch_yawrate_thrust_controller.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/roll_pitch_yawrate_thrust_controller.dir/src/library/roll_pitch_yawrate_thrust_controller.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/src/library/roll_pitch_yawrate_thrust_controller.cpp > CMakeFiles/roll_pitch_yawrate_thrust_controller.dir/src/library/roll_pitch_yawrate_thrust_controller.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/martin/catkin_ws/src/rotors_simulator/rotors_control/src/library/roll_pitch_yawrate_thrust_controller.cpp > CMakeFiles/roll_pitch_yawrate_thrust_controller.dir/src/library/roll_pitch_yawrate_thrust_controller.cpp.i
 
 CMakeFiles/roll_pitch_yawrate_thrust_controller.dir/src/library/roll_pitch_yawrate_thrust_controller.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/roll_pitch_yawrate_thrust_controller.dir/src/library/roll_pitch_yawrate_thrust_controller.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/src/library/roll_pitch_yawrate_thrust_controller.cpp -o CMakeFiles/roll_pitch_yawrate_thrust_controller.dir/src/library/roll_pitch_yawrate_thrust_controller.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/martin/catkin_ws/src/rotors_simulator/rotors_control/src/library/roll_pitch_yawrate_thrust_controller.cpp -o CMakeFiles/roll_pitch_yawrate_thrust_controller.dir/src/library/roll_pitch_yawrate_thrust_controller.cpp.s
 
 # Object files for target roll_pitch_yawrate_thrust_controller
 roll_pitch_yawrate_thrust_controller_OBJECTS = \
@@ -118,7 +118,7 @@ devel/lib/libroll_pitch_yawrate_thrust_controller.so: /usr/lib/x86_64-linux-gnu/
 devel/lib/libroll_pitch_yawrate_thrust_controller.so: /usr/lib/x86_64-linux-gnu/libpthread.so
 devel/lib/libroll_pitch_yawrate_thrust_controller.so: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4
 devel/lib/libroll_pitch_yawrate_thrust_controller.so: CMakeFiles/roll_pitch_yawrate_thrust_controller.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX shared library devel/lib/libroll_pitch_yawrate_thrust_controller.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX shared library devel/lib/libroll_pitch_yawrate_thrust_controller.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/roll_pitch_yawrate_thrust_controller.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -131,6 +131,6 @@ CMakeFiles/roll_pitch_yawrate_thrust_controller.dir/clean:
 .PHONY : CMakeFiles/roll_pitch_yawrate_thrust_controller.dir/clean
 
 CMakeFiles/roll_pitch_yawrate_thrust_controller.dir/depend:
-	cd /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/griffin/catkin_ws/src/rotors_simulator/rotors_control /home/griffin/catkin_ws/src/rotors_simulator/rotors_control /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles/roll_pitch_yawrate_thrust_controller.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/martin/catkin_ws/src/rotors_simulator/rotors_control /home/martin/catkin_ws/src/rotors_simulator/rotors_control /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles/roll_pitch_yawrate_thrust_controller.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/roll_pitch_yawrate_thrust_controller.dir/depend
 

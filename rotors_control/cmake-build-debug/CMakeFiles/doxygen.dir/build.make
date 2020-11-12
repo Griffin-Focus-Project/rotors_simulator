@@ -63,10 +63,10 @@ RM = /snap/clion/129/bin/cmake/linux/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/griffin/catkin_ws/src/rotors_simulator/rotors_control
+CMAKE_SOURCE_DIR = /home/martin/catkin_ws/src/rotors_simulator/rotors_control
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug
+CMAKE_BINARY_DIR = /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug
 
 # Utility rule file for doxygen.
 
@@ -87,6 +87,6 @@ CMakeFiles/doxygen.dir/clean:
 .PHONY : CMakeFiles/doxygen.dir/clean
 
 CMakeFiles/doxygen.dir/depend:
-	cd /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/griffin/catkin_ws/src/rotors_simulator/rotors_control /home/griffin/catkin_ws/src/rotors_simulator/rotors_control /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles/doxygen.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/martin/catkin_ws/src/rotors_simulator/rotors_control /home/martin/catkin_ws/src/rotors_simulator/rotors_control /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles/doxygen.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/doxygen.dir/depend
 

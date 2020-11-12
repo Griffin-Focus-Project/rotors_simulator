@@ -1,6 +1,6 @@
 # CMake generated Testfile for 
 # Source directory: /usr/src/googletest
-# Build directory: /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/gtest
+# Build directory: /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/gtest
 # 
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.

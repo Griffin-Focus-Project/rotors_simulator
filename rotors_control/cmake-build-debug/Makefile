@@ -68,10 +68,10 @@ RM = /snap/clion/129/bin/cmake/linux/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/griffin/catkin_ws/src/rotors_simulator/rotors_control
+CMAKE_SOURCE_DIR = /home/martin/catkin_ws/src/rotors_simulator/rotors_control
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug
+CMAKE_BINARY_DIR = /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -157,9 +157,9 @@ list_install_components/fast: list_install_components
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -186,6 +186,19 @@ preinstall/fast:
 depend:
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
+
+#=============================================================================
+# Target rules for targets named griffin_controller_node
+
+# Build rule for target.
+griffin_controller_node: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 griffin_controller_node
+.PHONY : griffin_controller_node
+
+# fast build rule for target.
+griffin_controller_node/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/griffin_controller_node.dir/build.make CMakeFiles/griffin_controller_node.dir/build
+.PHONY : griffin_controller_node/fast
 
 #=============================================================================
 # Target rules for targets named roll_pitch_yawrate_thrust_controller_node
@@ -630,6 +643,19 @@ lee_position_controller/fast:
 .PHONY : lee_position_controller/fast
 
 #=============================================================================
+# Target rules for targets named griffin_controller
+
+# Build rule for target.
+griffin_controller: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 griffin_controller
+.PHONY : griffin_controller
+
+# fast build rule for target.
+griffin_controller/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/griffin_controller.dir/build.make CMakeFiles/griffin_controller.dir/build
+.PHONY : griffin_controller/fast
+
+#=============================================================================
 # Target rules for targets named trajectory_msgs_generate_messages_cpp
 
 # Build rule for target.
@@ -941,6 +967,33 @@ gtest_main/fast:
 	$(MAKE) $(MAKESILENT) -f gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/build.make gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/build
 .PHONY : gtest_main/fast
 
+src/library/griffin_controller.o: src/library/griffin_controller.cpp.o
+
+.PHONY : src/library/griffin_controller.o
+
+# target to build an object file
+src/library/griffin_controller.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/griffin_controller.dir/build.make CMakeFiles/griffin_controller.dir/src/library/griffin_controller.cpp.o
+.PHONY : src/library/griffin_controller.cpp.o
+
+src/library/griffin_controller.i: src/library/griffin_controller.cpp.i
+
+.PHONY : src/library/griffin_controller.i
+
+# target to preprocess a source file
+src/library/griffin_controller.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/griffin_controller.dir/build.make CMakeFiles/griffin_controller.dir/src/library/griffin_controller.cpp.i
+.PHONY : src/library/griffin_controller.cpp.i
+
+src/library/griffin_controller.s: src/library/griffin_controller.cpp.s
+
+.PHONY : src/library/griffin_controller.s
+
+# target to generate assembly for a file
+src/library/griffin_controller.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/griffin_controller.dir/build.make CMakeFiles/griffin_controller.dir/src/library/griffin_controller.cpp.s
+.PHONY : src/library/griffin_controller.cpp.s
+
 src/library/lee_position_controller.o: src/library/lee_position_controller.cpp.o
 
 .PHONY : src/library/lee_position_controller.o
@@ -994,6 +1047,33 @@ src/library/roll_pitch_yawrate_thrust_controller.s: src/library/roll_pitch_yawra
 src/library/roll_pitch_yawrate_thrust_controller.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/roll_pitch_yawrate_thrust_controller.dir/build.make CMakeFiles/roll_pitch_yawrate_thrust_controller.dir/src/library/roll_pitch_yawrate_thrust_controller.cpp.s
 .PHONY : src/library/roll_pitch_yawrate_thrust_controller.cpp.s
+
+src/nodes/griffin_controller_node.o: src/nodes/griffin_controller_node.cpp.o
+
+.PHONY : src/nodes/griffin_controller_node.o
+
+# target to build an object file
+src/nodes/griffin_controller_node.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/griffin_controller_node.dir/build.make CMakeFiles/griffin_controller_node.dir/src/nodes/griffin_controller_node.cpp.o
+.PHONY : src/nodes/griffin_controller_node.cpp.o
+
+src/nodes/griffin_controller_node.i: src/nodes/griffin_controller_node.cpp.i
+
+.PHONY : src/nodes/griffin_controller_node.i
+
+# target to preprocess a source file
+src/nodes/griffin_controller_node.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/griffin_controller_node.dir/build.make CMakeFiles/griffin_controller_node.dir/src/nodes/griffin_controller_node.cpp.i
+.PHONY : src/nodes/griffin_controller_node.cpp.i
+
+src/nodes/griffin_controller_node.s: src/nodes/griffin_controller_node.cpp.s
+
+.PHONY : src/nodes/griffin_controller_node.s
+
+# target to generate assembly for a file
+src/nodes/griffin_controller_node.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/griffin_controller_node.dir/build.make CMakeFiles/griffin_controller_node.dir/src/nodes/griffin_controller_node.cpp.s
+.PHONY : src/nodes/griffin_controller_node.cpp.s
 
 src/nodes/lee_position_controller_node.o: src/nodes/lee_position_controller_node.cpp.o
 
@@ -1114,18 +1194,26 @@ help:
 	@echo "... trajectory_msgs_generate_messages_py"
 	@echo "... gmock"
 	@echo "... gmock_main"
+	@echo "... griffin_controller"
+	@echo "... griffin_controller_node"
 	@echo "... gtest"
 	@echo "... gtest_main"
 	@echo "... lee_position_controller"
 	@echo "... lee_position_controller_node"
 	@echo "... roll_pitch_yawrate_thrust_controller"
 	@echo "... roll_pitch_yawrate_thrust_controller_node"
+	@echo "... src/library/griffin_controller.o"
+	@echo "... src/library/griffin_controller.i"
+	@echo "... src/library/griffin_controller.s"
 	@echo "... src/library/lee_position_controller.o"
 	@echo "... src/library/lee_position_controller.i"
 	@echo "... src/library/lee_position_controller.s"
 	@echo "... src/library/roll_pitch_yawrate_thrust_controller.o"
 	@echo "... src/library/roll_pitch_yawrate_thrust_controller.i"
 	@echo "... src/library/roll_pitch_yawrate_thrust_controller.s"
+	@echo "... src/nodes/griffin_controller_node.o"
+	@echo "... src/nodes/griffin_controller_node.i"
+	@echo "... src/nodes/griffin_controller_node.s"
 	@echo "... src/nodes/lee_position_controller_node.o"
 	@echo "... src/nodes/lee_position_controller_node.i"
 	@echo "... src/nodes/lee_position_controller_node.s"
