@@ -67,8 +67,8 @@ set(rotors_control_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("TRUE" STREQUAL "TRUE")
-  set(rotors_control_SOURCE_PREFIX /home/griffin/catkin_ws/src/rotors_simulator/rotors_control)
-  set(rotors_control_DEVEL_PREFIX /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/devel)
+  set(rotors_control_SOURCE_PREFIX /home/martin/catkin_ws/src/rotors_simulator/rotors_control)
+  set(rotors_control_DEVEL_PREFIX /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/devel)
   set(rotors_control_INSTALL_PREFIX "")
   set(rotors_control_PREFIX ${rotors_control_DEVEL_PREFIX})
 else()
@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(rotors_control_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT "/home/griffin/catkin_ws/src/rotors_simulator/rotors_control/include " STREQUAL " ")
+if(NOT "/home/martin/catkin_ws/src/rotors_simulator/rotors_control/include " STREQUAL " ")
   set(rotors_control_INCLUDE_DIRS "")
-  set(_include_dirs "/home/griffin/catkin_ws/src/rotors_simulator/rotors_control/include")
+  set(_include_dirs "/home/martin/catkin_ws/src/rotors_simulator/rotors_control/include")
   if(NOT "https://github.com/ethz-asl/rotors_simulator/issues " STREQUAL " ")
     set(_report "Check the issue tracker 'https://github.com/ethz-asl/rotors_simulator/issues' and consider creating a ticket if the problem has not been reported yet.")
   elseif(NOT "https://github.com/ethz-asl/rotors_simulator " STREQUAL " ")
@@ -110,7 +110,7 @@ if(NOT "/home/griffin/catkin_ws/src/rotors_simulator/rotors_control/include " ST
         message(FATAL_ERROR "Project 'rotors_control' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  ${_report}")
       endif()
     else()
-      message(FATAL_ERROR "Project 'rotors_control' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/griffin/catkin_ws/src/rotors_simulator/rotors_control/${idir}'.  ${_report}")
+      message(FATAL_ERROR "Project 'rotors_control' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/martin/catkin_ws/src/rotors_simulator/rotors_control/${idir}'.  ${_report}")
     endif()
     _list_append_unique(rotors_control_INCLUDE_DIRS ${include})
   endforeach()
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/devel/lib;/home/griffin/catkin_ws/devel/lib;/opt/ros/melodic/lib)
+    foreach(path /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/devel/lib;/home/martin/catkin_ws/devel/lib;/opt/ros/melodic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

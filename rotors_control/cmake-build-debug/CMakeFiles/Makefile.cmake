@@ -7,6 +7,10 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 # The top level Makefile was generated from the following files:
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
+  "/home/martin/catkin_ws/devel/share/mav_msgs/cmake/mav_msgs-msg-extras.cmake"
+  "/home/martin/catkin_ws/devel/share/mav_msgs/cmake/mav_msgsConfig-version.cmake"
+  "/home/martin/catkin_ws/devel/share/mav_msgs/cmake/mav_msgsConfig.cmake"
+  "/home/martin/catkin_ws/src/mav_comm/mav_msgs/cmake/export_flags.cmake"
   "../CMakeLists.txt"
   "CMakeFiles/3.17.3/CMakeCCompiler.cmake"
   "CMakeFiles/3.17.3/CMakeCXXCompiler.cmake"
@@ -102,10 +106,6 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/opt/ros/melodic/share/geometry_msgs/cmake/geometry_msgs-msg-extras.cmake"
   "/opt/ros/melodic/share/geometry_msgs/cmake/geometry_msgsConfig-version.cmake"
   "/opt/ros/melodic/share/geometry_msgs/cmake/geometry_msgsConfig.cmake"
-  "/opt/ros/melodic/share/mav_msgs/cmake/export_flags.cmake"
-  "/opt/ros/melodic/share/mav_msgs/cmake/mav_msgs-msg-extras.cmake"
-  "/opt/ros/melodic/share/mav_msgs/cmake/mav_msgsConfig-version.cmake"
-  "/opt/ros/melodic/share/mav_msgs/cmake/mav_msgsConfig.cmake"
   "/opt/ros/melodic/share/message_runtime/cmake/message_runtimeConfig-version.cmake"
   "/opt/ros/melodic/share/message_runtime/cmake/message_runtimeConfig.cmake"
   "/opt/ros/melodic/share/nav_msgs/cmake/nav_msgs-msg-extras.cmake"
@@ -229,6 +229,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "CMakeFiles/griffin_controller_node.dir/DependInfo.cmake"
   "CMakeFiles/roll_pitch_yawrate_thrust_controller_node.dir/DependInfo.cmake"
   "CMakeFiles/roll_pitch_yawrate_thrust_controller.dir/DependInfo.cmake"
   "CMakeFiles/sensor_msgs_generate_messages_py.dir/DependInfo.cmake"
@@ -263,6 +264,7 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/roscpp_generate_messages_cpp.dir/DependInfo.cmake"
   "CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/DependInfo.cmake"
   "CMakeFiles/lee_position_controller.dir/DependInfo.cmake"
+  "CMakeFiles/griffin_controller.dir/DependInfo.cmake"
   "CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/DependInfo.cmake"
   "CMakeFiles/geometry_msgs_generate_messages_cpp.dir/DependInfo.cmake"
   "CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/DependInfo.cmake"

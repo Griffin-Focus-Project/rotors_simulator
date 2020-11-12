@@ -64,19 +64,21 @@ RM = /snap/clion/129/bin/cmake/linux/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/griffin/catkin_ws/src/rotors_simulator/rotors_control
+CMAKE_SOURCE_DIR = /home/martin/catkin_ws/src/rotors_simulator/rotors_control
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug
+CMAKE_BINARY_DIR = /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug
 
 #=============================================================================
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
+all: CMakeFiles/griffin_controller_node.dir/all
 all: CMakeFiles/roll_pitch_yawrate_thrust_controller_node.dir/all
 all: CMakeFiles/roll_pitch_yawrate_thrust_controller.dir/all
 all: CMakeFiles/lee_position_controller_node.dir/all
 all: CMakeFiles/lee_position_controller.dir/all
+all: CMakeFiles/griffin_controller.dir/all
 all: gtest/all
 
 .PHONY : all
@@ -87,6 +89,7 @@ preinstall: gtest/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
+clean: CMakeFiles/griffin_controller_node.dir/clean
 clean: CMakeFiles/roll_pitch_yawrate_thrust_controller_node.dir/clean
 clean: CMakeFiles/roll_pitch_yawrate_thrust_controller.dir/clean
 clean: CMakeFiles/sensor_msgs_generate_messages_py.dir/clean
@@ -121,6 +124,7 @@ clean: CMakeFiles/actionlib_msgs_generate_messages_py.dir/clean
 clean: CMakeFiles/roscpp_generate_messages_cpp.dir/clean
 clean: CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean
 clean: CMakeFiles/lee_position_controller.dir/clean
+clean: CMakeFiles/griffin_controller.dir/clean
 clean: CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/clean
 clean: CMakeFiles/geometry_msgs_generate_messages_cpp.dir/clean
 clean: CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/clean
@@ -203,6 +207,78 @@ gtest/googlemock/gtest/clean: gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/c
 .PHONY : gtest/googlemock/gtest/clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/griffin_controller_node.dir
+
+# All Build rule for target.
+CMakeFiles/griffin_controller_node.dir/all: CMakeFiles/sensor_msgs_generate_messages_py.dir/all
+CMakeFiles/griffin_controller_node.dir/all: CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/all
+CMakeFiles/griffin_controller_node.dir/all: CMakeFiles/mav_msgs_generate_messages_cpp.dir/all
+CMakeFiles/griffin_controller_node.dir/all: CMakeFiles/mav_msgs_generate_messages_py.dir/all
+CMakeFiles/griffin_controller_node.dir/all: CMakeFiles/mav_msgs_generate_messages_eus.dir/all
+CMakeFiles/griffin_controller_node.dir/all: CMakeFiles/sensor_msgs_generate_messages_lisp.dir/all
+CMakeFiles/griffin_controller_node.dir/all: CMakeFiles/trajectory_msgs_generate_messages_eus.dir/all
+CMakeFiles/griffin_controller_node.dir/all: CMakeFiles/geometry_msgs_generate_messages_py.dir/all
+CMakeFiles/griffin_controller_node.dir/all: CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
+CMakeFiles/griffin_controller_node.dir/all: CMakeFiles/std_msgs_generate_messages_eus.dir/all
+CMakeFiles/griffin_controller_node.dir/all: CMakeFiles/roscpp_generate_messages_lisp.dir/all
+CMakeFiles/griffin_controller_node.dir/all: CMakeFiles/mav_msgs_generate_messages_nodejs.dir/all
+CMakeFiles/griffin_controller_node.dir/all: CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/all
+CMakeFiles/griffin_controller_node.dir/all: CMakeFiles/trajectory_msgs_generate_messages_py.dir/all
+CMakeFiles/griffin_controller_node.dir/all: CMakeFiles/actionlib_msgs_generate_messages_eus.dir/all
+CMakeFiles/griffin_controller_node.dir/all: CMakeFiles/std_msgs_generate_messages_lisp.dir/all
+CMakeFiles/griffin_controller_node.dir/all: CMakeFiles/geometry_msgs_generate_messages_lisp.dir/all
+CMakeFiles/griffin_controller_node.dir/all: CMakeFiles/roscpp_generate_messages_nodejs.dir/all
+CMakeFiles/griffin_controller_node.dir/all: CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
+CMakeFiles/griffin_controller_node.dir/all: CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
+CMakeFiles/griffin_controller_node.dir/all: CMakeFiles/nav_msgs_generate_messages_eus.dir/all
+CMakeFiles/griffin_controller_node.dir/all: CMakeFiles/geometry_msgs_generate_messages_eus.dir/all
+CMakeFiles/griffin_controller_node.dir/all: CMakeFiles/actionlib_msgs_generate_messages_py.dir/all
+CMakeFiles/griffin_controller_node.dir/all: CMakeFiles/roscpp_generate_messages_cpp.dir/all
+CMakeFiles/griffin_controller_node.dir/all: CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
+CMakeFiles/griffin_controller_node.dir/all: CMakeFiles/griffin_controller.dir/all
+CMakeFiles/griffin_controller_node.dir/all: CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/all
+CMakeFiles/griffin_controller_node.dir/all: CMakeFiles/geometry_msgs_generate_messages_cpp.dir/all
+CMakeFiles/griffin_controller_node.dir/all: CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/all
+CMakeFiles/griffin_controller_node.dir/all: CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/all
+CMakeFiles/griffin_controller_node.dir/all: CMakeFiles/nav_msgs_generate_messages_cpp.dir/all
+CMakeFiles/griffin_controller_node.dir/all: CMakeFiles/sensor_msgs_generate_messages_eus.dir/all
+CMakeFiles/griffin_controller_node.dir/all: CMakeFiles/std_msgs_generate_messages_cpp.dir/all
+CMakeFiles/griffin_controller_node.dir/all: CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/all
+CMakeFiles/griffin_controller_node.dir/all: CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
+CMakeFiles/griffin_controller_node.dir/all: CMakeFiles/nav_msgs_generate_messages_lisp.dir/all
+CMakeFiles/griffin_controller_node.dir/all: CMakeFiles/nav_msgs_generate_messages_nodejs.dir/all
+CMakeFiles/griffin_controller_node.dir/all: CMakeFiles/std_msgs_generate_messages_py.dir/all
+CMakeFiles/griffin_controller_node.dir/all: CMakeFiles/nav_msgs_generate_messages_py.dir/all
+CMakeFiles/griffin_controller_node.dir/all: CMakeFiles/mav_msgs_generate_messages_lisp.dir/all
+CMakeFiles/griffin_controller_node.dir/all: CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/all
+CMakeFiles/griffin_controller_node.dir/all: CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/all
+CMakeFiles/griffin_controller_node.dir/all: CMakeFiles/roscpp_generate_messages_eus.dir/all
+CMakeFiles/griffin_controller_node.dir/all: CMakeFiles/roscpp_generate_messages_py.dir/all
+CMakeFiles/griffin_controller_node.dir/all: CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all
+CMakeFiles/griffin_controller_node.dir/all: CMakeFiles/sensor_msgs_generate_messages_cpp.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/griffin_controller_node.dir/build.make CMakeFiles/griffin_controller_node.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/griffin_controller_node.dir/build.make CMakeFiles/griffin_controller_node.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num=10,11 "Built target griffin_controller_node"
+.PHONY : CMakeFiles/griffin_controller_node.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/griffin_controller_node.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 4
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/griffin_controller_node.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/griffin_controller_node.dir/rule
+
+# Convenience name for target.
+griffin_controller_node: CMakeFiles/griffin_controller_node.dir/rule
+
+.PHONY : griffin_controller_node
+
+# clean rule for target.
+CMakeFiles/griffin_controller_node.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/griffin_controller_node.dir/build.make CMakeFiles/griffin_controller_node.dir/clean
+.PHONY : CMakeFiles/griffin_controller_node.dir/clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/roll_pitch_yawrate_thrust_controller_node.dir
 
 # All Build rule for target.
@@ -254,14 +330,14 @@ CMakeFiles/roll_pitch_yawrate_thrust_controller_node.dir/all: CMakeFiles/rosgrap
 CMakeFiles/roll_pitch_yawrate_thrust_controller_node.dir/all: CMakeFiles/sensor_msgs_generate_messages_cpp.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/roll_pitch_yawrate_thrust_controller_node.dir/build.make CMakeFiles/roll_pitch_yawrate_thrust_controller_node.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/roll_pitch_yawrate_thrust_controller_node.dir/build.make CMakeFiles/roll_pitch_yawrate_thrust_controller_node.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num=18,19 "Built target roll_pitch_yawrate_thrust_controller_node"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num=22,23 "Built target roll_pitch_yawrate_thrust_controller_node"
 .PHONY : CMakeFiles/roll_pitch_yawrate_thrust_controller_node.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/roll_pitch_yawrate_thrust_controller_node.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/roll_pitch_yawrate_thrust_controller_node.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/roll_pitch_yawrate_thrust_controller_node.dir/rule
 
 # Convenience name for target.
@@ -325,14 +401,14 @@ CMakeFiles/roll_pitch_yawrate_thrust_controller.dir/all: CMakeFiles/rosgraph_msg
 CMakeFiles/roll_pitch_yawrate_thrust_controller.dir/all: CMakeFiles/sensor_msgs_generate_messages_cpp.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/roll_pitch_yawrate_thrust_controller.dir/build.make CMakeFiles/roll_pitch_yawrate_thrust_controller.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/roll_pitch_yawrate_thrust_controller.dir/build.make CMakeFiles/roll_pitch_yawrate_thrust_controller.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num=16,17 "Built target roll_pitch_yawrate_thrust_controller"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num=20,21 "Built target roll_pitch_yawrate_thrust_controller"
 .PHONY : CMakeFiles/roll_pitch_yawrate_thrust_controller.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/roll_pitch_yawrate_thrust_controller.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/roll_pitch_yawrate_thrust_controller.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/roll_pitch_yawrate_thrust_controller.dir/rule
 
 # Convenience name for target.
@@ -352,14 +428,14 @@ CMakeFiles/roll_pitch_yawrate_thrust_controller.dir/clean:
 CMakeFiles/sensor_msgs_generate_messages_py.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make CMakeFiles/sensor_msgs_generate_messages_py.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make CMakeFiles/sensor_msgs_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num= "Built target sensor_msgs_generate_messages_py"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num= "Built target sensor_msgs_generate_messages_py"
 .PHONY : CMakeFiles/sensor_msgs_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/sensor_msgs_generate_messages_py.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/sensor_msgs_generate_messages_py.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -379,14 +455,14 @@ CMakeFiles/sensor_msgs_generate_messages_py.dir/clean:
 CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build.make CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build.make CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num= "Built target sensor_msgs_generate_messages_nodejs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num= "Built target sensor_msgs_generate_messages_nodejs"
 .PHONY : CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -406,14 +482,14 @@ CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/clean:
 CMakeFiles/mav_msgs_generate_messages_cpp.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mav_msgs_generate_messages_cpp.dir/build.make CMakeFiles/mav_msgs_generate_messages_cpp.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mav_msgs_generate_messages_cpp.dir/build.make CMakeFiles/mav_msgs_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num= "Built target mav_msgs_generate_messages_cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num= "Built target mav_msgs_generate_messages_cpp"
 .PHONY : CMakeFiles/mav_msgs_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/mav_msgs_generate_messages_cpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/mav_msgs_generate_messages_cpp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/mav_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -433,14 +509,14 @@ CMakeFiles/mav_msgs_generate_messages_cpp.dir/clean:
 CMakeFiles/mav_msgs_generate_messages_py.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mav_msgs_generate_messages_py.dir/build.make CMakeFiles/mav_msgs_generate_messages_py.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mav_msgs_generate_messages_py.dir/build.make CMakeFiles/mav_msgs_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num= "Built target mav_msgs_generate_messages_py"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num= "Built target mav_msgs_generate_messages_py"
 .PHONY : CMakeFiles/mav_msgs_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/mav_msgs_generate_messages_py.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/mav_msgs_generate_messages_py.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/mav_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -460,14 +536,14 @@ CMakeFiles/mav_msgs_generate_messages_py.dir/clean:
 CMakeFiles/mav_msgs_generate_messages_eus.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mav_msgs_generate_messages_eus.dir/build.make CMakeFiles/mav_msgs_generate_messages_eus.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mav_msgs_generate_messages_eus.dir/build.make CMakeFiles/mav_msgs_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num= "Built target mav_msgs_generate_messages_eus"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num= "Built target mav_msgs_generate_messages_eus"
 .PHONY : CMakeFiles/mav_msgs_generate_messages_eus.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/mav_msgs_generate_messages_eus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/mav_msgs_generate_messages_eus.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/mav_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -487,14 +563,14 @@ CMakeFiles/mav_msgs_generate_messages_eus.dir/clean:
 CMakeFiles/sensor_msgs_generate_messages_lisp.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make CMakeFiles/sensor_msgs_generate_messages_lisp.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num= "Built target sensor_msgs_generate_messages_lisp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num= "Built target sensor_msgs_generate_messages_lisp"
 .PHONY : CMakeFiles/sensor_msgs_generate_messages_lisp.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/sensor_msgs_generate_messages_lisp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -514,14 +590,14 @@ CMakeFiles/sensor_msgs_generate_messages_lisp.dir/clean:
 CMakeFiles/download_extra_data.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/download_extra_data.dir/build.make CMakeFiles/download_extra_data.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/download_extra_data.dir/build.make CMakeFiles/download_extra_data.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num= "Built target download_extra_data"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num= "Built target download_extra_data"
 .PHONY : CMakeFiles/download_extra_data.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/download_extra_data.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/download_extra_data.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/download_extra_data.dir/rule
 
 # Convenience name for target.
@@ -541,14 +617,14 @@ CMakeFiles/download_extra_data.dir/clean:
 CMakeFiles/trajectory_msgs_generate_messages_eus.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/trajectory_msgs_generate_messages_eus.dir/build.make CMakeFiles/trajectory_msgs_generate_messages_eus.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/trajectory_msgs_generate_messages_eus.dir/build.make CMakeFiles/trajectory_msgs_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num= "Built target trajectory_msgs_generate_messages_eus"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num= "Built target trajectory_msgs_generate_messages_eus"
 .PHONY : CMakeFiles/trajectory_msgs_generate_messages_eus.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/trajectory_msgs_generate_messages_eus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/trajectory_msgs_generate_messages_eus.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/trajectory_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -568,14 +644,14 @@ CMakeFiles/trajectory_msgs_generate_messages_eus.dir/clean:
 CMakeFiles/geometry_msgs_generate_messages_py.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make CMakeFiles/geometry_msgs_generate_messages_py.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make CMakeFiles/geometry_msgs_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num= "Built target geometry_msgs_generate_messages_py"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num= "Built target geometry_msgs_generate_messages_py"
 .PHONY : CMakeFiles/geometry_msgs_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/geometry_msgs_generate_messages_py.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/geometry_msgs_generate_messages_py.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -595,14 +671,14 @@ CMakeFiles/geometry_msgs_generate_messages_py.dir/clean:
 CMakeFiles/std_msgs_generate_messages_nodejs.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make CMakeFiles/std_msgs_generate_messages_nodejs.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make CMakeFiles/std_msgs_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num= "Built target std_msgs_generate_messages_nodejs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num= "Built target std_msgs_generate_messages_nodejs"
 .PHONY : CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -622,14 +698,14 @@ CMakeFiles/std_msgs_generate_messages_nodejs.dir/clean:
 CMakeFiles/std_msgs_generate_messages_eus.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/std_msgs_generate_messages_eus.dir/build.make CMakeFiles/std_msgs_generate_messages_eus.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/std_msgs_generate_messages_eus.dir/build.make CMakeFiles/std_msgs_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num= "Built target std_msgs_generate_messages_eus"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num= "Built target std_msgs_generate_messages_eus"
 .PHONY : CMakeFiles/std_msgs_generate_messages_eus.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/std_msgs_generate_messages_eus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/std_msgs_generate_messages_eus.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/std_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -649,14 +725,14 @@ CMakeFiles/std_msgs_generate_messages_eus.dir/clean:
 CMakeFiles/roscpp_generate_messages_lisp.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/roscpp_generate_messages_lisp.dir/build.make CMakeFiles/roscpp_generate_messages_lisp.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/roscpp_generate_messages_lisp.dir/build.make CMakeFiles/roscpp_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num= "Built target roscpp_generate_messages_lisp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num= "Built target roscpp_generate_messages_lisp"
 .PHONY : CMakeFiles/roscpp_generate_messages_lisp.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/roscpp_generate_messages_lisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/roscpp_generate_messages_lisp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/roscpp_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -676,14 +752,14 @@ CMakeFiles/roscpp_generate_messages_lisp.dir/clean:
 CMakeFiles/clean_test_results.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/clean_test_results.dir/build.make CMakeFiles/clean_test_results.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/clean_test_results.dir/build.make CMakeFiles/clean_test_results.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num= "Built target clean_test_results"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num= "Built target clean_test_results"
 .PHONY : CMakeFiles/clean_test_results.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/clean_test_results.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/clean_test_results.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/clean_test_results.dir/rule
 
 # Convenience name for target.
@@ -703,14 +779,14 @@ CMakeFiles/clean_test_results.dir/clean:
 CMakeFiles/mav_msgs_generate_messages_nodejs.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mav_msgs_generate_messages_nodejs.dir/build.make CMakeFiles/mav_msgs_generate_messages_nodejs.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mav_msgs_generate_messages_nodejs.dir/build.make CMakeFiles/mav_msgs_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num= "Built target mav_msgs_generate_messages_nodejs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num= "Built target mav_msgs_generate_messages_nodejs"
 .PHONY : CMakeFiles/mav_msgs_generate_messages_nodejs.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/mav_msgs_generate_messages_nodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/mav_msgs_generate_messages_nodejs.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/mav_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -730,14 +806,14 @@ CMakeFiles/mav_msgs_generate_messages_nodejs.dir/clean:
 CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build.make CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build.make CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num= "Built target geometry_msgs_generate_messages_nodejs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num= "Built target geometry_msgs_generate_messages_nodejs"
 .PHONY : CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -757,14 +833,14 @@ CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/clean:
 CMakeFiles/run_tests.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num= "Built target run_tests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num= "Built target run_tests"
 .PHONY : CMakeFiles/run_tests.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/run_tests.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/run_tests.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/run_tests.dir/rule
 
 # Convenience name for target.
@@ -829,14 +905,14 @@ CMakeFiles/lee_position_controller_node.dir/all: CMakeFiles/rosgraph_msgs_genera
 CMakeFiles/lee_position_controller_node.dir/all: CMakeFiles/sensor_msgs_generate_messages_cpp.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lee_position_controller_node.dir/build.make CMakeFiles/lee_position_controller_node.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lee_position_controller_node.dir/build.make CMakeFiles/lee_position_controller_node.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num=14,15 "Built target lee_position_controller_node"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num=18,19 "Built target lee_position_controller_node"
 .PHONY : CMakeFiles/lee_position_controller_node.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/lee_position_controller_node.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/lee_position_controller_node.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/lee_position_controller_node.dir/rule
 
 # Convenience name for target.
@@ -856,14 +932,14 @@ CMakeFiles/lee_position_controller_node.dir/clean:
 CMakeFiles/doxygen.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/doxygen.dir/build.make CMakeFiles/doxygen.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/doxygen.dir/build.make CMakeFiles/doxygen.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num= "Built target doxygen"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num= "Built target doxygen"
 .PHONY : CMakeFiles/doxygen.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/doxygen.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/doxygen.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/doxygen.dir/rule
 
 # Convenience name for target.
@@ -883,14 +959,14 @@ CMakeFiles/doxygen.dir/clean:
 CMakeFiles/trajectory_msgs_generate_messages_py.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/trajectory_msgs_generate_messages_py.dir/build.make CMakeFiles/trajectory_msgs_generate_messages_py.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/trajectory_msgs_generate_messages_py.dir/build.make CMakeFiles/trajectory_msgs_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num= "Built target trajectory_msgs_generate_messages_py"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num= "Built target trajectory_msgs_generate_messages_py"
 .PHONY : CMakeFiles/trajectory_msgs_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/trajectory_msgs_generate_messages_py.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/trajectory_msgs_generate_messages_py.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/trajectory_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -910,14 +986,14 @@ CMakeFiles/trajectory_msgs_generate_messages_py.dir/clean:
 CMakeFiles/actionlib_msgs_generate_messages_eus.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/actionlib_msgs_generate_messages_eus.dir/build.make CMakeFiles/actionlib_msgs_generate_messages_eus.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/actionlib_msgs_generate_messages_eus.dir/build.make CMakeFiles/actionlib_msgs_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num= "Built target actionlib_msgs_generate_messages_eus"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num= "Built target actionlib_msgs_generate_messages_eus"
 .PHONY : CMakeFiles/actionlib_msgs_generate_messages_eus.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/actionlib_msgs_generate_messages_eus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/actionlib_msgs_generate_messages_eus.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/actionlib_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -937,14 +1013,14 @@ CMakeFiles/actionlib_msgs_generate_messages_eus.dir/clean:
 CMakeFiles/std_msgs_generate_messages_lisp.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make CMakeFiles/std_msgs_generate_messages_lisp.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make CMakeFiles/std_msgs_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num= "Built target std_msgs_generate_messages_lisp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num= "Built target std_msgs_generate_messages_lisp"
 .PHONY : CMakeFiles/std_msgs_generate_messages_lisp.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/std_msgs_generate_messages_lisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/std_msgs_generate_messages_lisp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -964,14 +1040,14 @@ CMakeFiles/std_msgs_generate_messages_lisp.dir/clean:
 CMakeFiles/geometry_msgs_generate_messages_lisp.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make CMakeFiles/geometry_msgs_generate_messages_lisp.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num= "Built target geometry_msgs_generate_messages_lisp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num= "Built target geometry_msgs_generate_messages_lisp"
 .PHONY : CMakeFiles/geometry_msgs_generate_messages_lisp.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/geometry_msgs_generate_messages_lisp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -991,14 +1067,14 @@ CMakeFiles/geometry_msgs_generate_messages_lisp.dir/clean:
 CMakeFiles/tests.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num= "Built target tests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num= "Built target tests"
 .PHONY : CMakeFiles/tests.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/tests.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/tests.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/tests.dir/rule
 
 # Convenience name for target.
@@ -1018,14 +1094,14 @@ CMakeFiles/tests.dir/clean:
 CMakeFiles/roscpp_generate_messages_nodejs.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make CMakeFiles/roscpp_generate_messages_nodejs.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make CMakeFiles/roscpp_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num= "Built target roscpp_generate_messages_nodejs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num= "Built target roscpp_generate_messages_nodejs"
 .PHONY : CMakeFiles/roscpp_generate_messages_nodejs.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/roscpp_generate_messages_nodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/roscpp_generate_messages_nodejs.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -1045,14 +1121,14 @@ CMakeFiles/roscpp_generate_messages_nodejs.dir/clean:
 CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_lisp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_lisp"
 .PHONY : CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -1072,14 +1148,14 @@ CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/clean:
 CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make CMakeFiles/rosgraph_msgs_generate_messages_py.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_py"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_py"
 .PHONY : CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -1099,14 +1175,14 @@ CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean:
 CMakeFiles/nav_msgs_generate_messages_eus.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/nav_msgs_generate_messages_eus.dir/build.make CMakeFiles/nav_msgs_generate_messages_eus.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/nav_msgs_generate_messages_eus.dir/build.make CMakeFiles/nav_msgs_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num= "Built target nav_msgs_generate_messages_eus"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num= "Built target nav_msgs_generate_messages_eus"
 .PHONY : CMakeFiles/nav_msgs_generate_messages_eus.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/nav_msgs_generate_messages_eus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/nav_msgs_generate_messages_eus.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/nav_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -1126,14 +1202,14 @@ CMakeFiles/nav_msgs_generate_messages_eus.dir/clean:
 CMakeFiles/geometry_msgs_generate_messages_eus.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/geometry_msgs_generate_messages_eus.dir/build.make CMakeFiles/geometry_msgs_generate_messages_eus.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/geometry_msgs_generate_messages_eus.dir/build.make CMakeFiles/geometry_msgs_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num= "Built target geometry_msgs_generate_messages_eus"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num= "Built target geometry_msgs_generate_messages_eus"
 .PHONY : CMakeFiles/geometry_msgs_generate_messages_eus.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/geometry_msgs_generate_messages_eus.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -1153,14 +1229,14 @@ CMakeFiles/geometry_msgs_generate_messages_eus.dir/clean:
 CMakeFiles/actionlib_msgs_generate_messages_py.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/actionlib_msgs_generate_messages_py.dir/build.make CMakeFiles/actionlib_msgs_generate_messages_py.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/actionlib_msgs_generate_messages_py.dir/build.make CMakeFiles/actionlib_msgs_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num= "Built target actionlib_msgs_generate_messages_py"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num= "Built target actionlib_msgs_generate_messages_py"
 .PHONY : CMakeFiles/actionlib_msgs_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/actionlib_msgs_generate_messages_py.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/actionlib_msgs_generate_messages_py.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/actionlib_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -1180,14 +1256,14 @@ CMakeFiles/actionlib_msgs_generate_messages_py.dir/clean:
 CMakeFiles/roscpp_generate_messages_cpp.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/roscpp_generate_messages_cpp.dir/build.make CMakeFiles/roscpp_generate_messages_cpp.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/roscpp_generate_messages_cpp.dir/build.make CMakeFiles/roscpp_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num= "Built target roscpp_generate_messages_cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num= "Built target roscpp_generate_messages_cpp"
 .PHONY : CMakeFiles/roscpp_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/roscpp_generate_messages_cpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/roscpp_generate_messages_cpp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/roscpp_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -1207,14 +1283,14 @@ CMakeFiles/roscpp_generate_messages_cpp.dir/clean:
 CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_cpp"
 .PHONY : CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -1278,14 +1354,14 @@ CMakeFiles/lee_position_controller.dir/all: CMakeFiles/rosgraph_msgs_generate_me
 CMakeFiles/lee_position_controller.dir/all: CMakeFiles/sensor_msgs_generate_messages_cpp.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lee_position_controller.dir/build.make CMakeFiles/lee_position_controller.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lee_position_controller.dir/build.make CMakeFiles/lee_position_controller.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num=12,13 "Built target lee_position_controller"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num=16,17 "Built target lee_position_controller"
 .PHONY : CMakeFiles/lee_position_controller.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/lee_position_controller.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/lee_position_controller.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/lee_position_controller.dir/rule
 
 # Convenience name for target.
@@ -1299,20 +1375,91 @@ CMakeFiles/lee_position_controller.dir/clean:
 .PHONY : CMakeFiles/lee_position_controller.dir/clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/griffin_controller.dir
+
+# All Build rule for target.
+CMakeFiles/griffin_controller.dir/all: CMakeFiles/sensor_msgs_generate_messages_py.dir/all
+CMakeFiles/griffin_controller.dir/all: CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/all
+CMakeFiles/griffin_controller.dir/all: CMakeFiles/mav_msgs_generate_messages_cpp.dir/all
+CMakeFiles/griffin_controller.dir/all: CMakeFiles/mav_msgs_generate_messages_py.dir/all
+CMakeFiles/griffin_controller.dir/all: CMakeFiles/mav_msgs_generate_messages_eus.dir/all
+CMakeFiles/griffin_controller.dir/all: CMakeFiles/sensor_msgs_generate_messages_lisp.dir/all
+CMakeFiles/griffin_controller.dir/all: CMakeFiles/trajectory_msgs_generate_messages_eus.dir/all
+CMakeFiles/griffin_controller.dir/all: CMakeFiles/geometry_msgs_generate_messages_py.dir/all
+CMakeFiles/griffin_controller.dir/all: CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
+CMakeFiles/griffin_controller.dir/all: CMakeFiles/std_msgs_generate_messages_eus.dir/all
+CMakeFiles/griffin_controller.dir/all: CMakeFiles/roscpp_generate_messages_lisp.dir/all
+CMakeFiles/griffin_controller.dir/all: CMakeFiles/mav_msgs_generate_messages_nodejs.dir/all
+CMakeFiles/griffin_controller.dir/all: CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/all
+CMakeFiles/griffin_controller.dir/all: CMakeFiles/trajectory_msgs_generate_messages_py.dir/all
+CMakeFiles/griffin_controller.dir/all: CMakeFiles/actionlib_msgs_generate_messages_eus.dir/all
+CMakeFiles/griffin_controller.dir/all: CMakeFiles/std_msgs_generate_messages_lisp.dir/all
+CMakeFiles/griffin_controller.dir/all: CMakeFiles/geometry_msgs_generate_messages_lisp.dir/all
+CMakeFiles/griffin_controller.dir/all: CMakeFiles/roscpp_generate_messages_nodejs.dir/all
+CMakeFiles/griffin_controller.dir/all: CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
+CMakeFiles/griffin_controller.dir/all: CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
+CMakeFiles/griffin_controller.dir/all: CMakeFiles/nav_msgs_generate_messages_eus.dir/all
+CMakeFiles/griffin_controller.dir/all: CMakeFiles/geometry_msgs_generate_messages_eus.dir/all
+CMakeFiles/griffin_controller.dir/all: CMakeFiles/actionlib_msgs_generate_messages_py.dir/all
+CMakeFiles/griffin_controller.dir/all: CMakeFiles/roscpp_generate_messages_cpp.dir/all
+CMakeFiles/griffin_controller.dir/all: CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
+CMakeFiles/griffin_controller.dir/all: CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/all
+CMakeFiles/griffin_controller.dir/all: CMakeFiles/geometry_msgs_generate_messages_cpp.dir/all
+CMakeFiles/griffin_controller.dir/all: CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/all
+CMakeFiles/griffin_controller.dir/all: CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/all
+CMakeFiles/griffin_controller.dir/all: CMakeFiles/nav_msgs_generate_messages_cpp.dir/all
+CMakeFiles/griffin_controller.dir/all: CMakeFiles/sensor_msgs_generate_messages_eus.dir/all
+CMakeFiles/griffin_controller.dir/all: CMakeFiles/std_msgs_generate_messages_cpp.dir/all
+CMakeFiles/griffin_controller.dir/all: CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/all
+CMakeFiles/griffin_controller.dir/all: CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
+CMakeFiles/griffin_controller.dir/all: CMakeFiles/nav_msgs_generate_messages_lisp.dir/all
+CMakeFiles/griffin_controller.dir/all: CMakeFiles/nav_msgs_generate_messages_nodejs.dir/all
+CMakeFiles/griffin_controller.dir/all: CMakeFiles/std_msgs_generate_messages_py.dir/all
+CMakeFiles/griffin_controller.dir/all: CMakeFiles/nav_msgs_generate_messages_py.dir/all
+CMakeFiles/griffin_controller.dir/all: CMakeFiles/mav_msgs_generate_messages_lisp.dir/all
+CMakeFiles/griffin_controller.dir/all: CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/all
+CMakeFiles/griffin_controller.dir/all: CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/all
+CMakeFiles/griffin_controller.dir/all: CMakeFiles/roscpp_generate_messages_eus.dir/all
+CMakeFiles/griffin_controller.dir/all: CMakeFiles/roscpp_generate_messages_py.dir/all
+CMakeFiles/griffin_controller.dir/all: CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all
+CMakeFiles/griffin_controller.dir/all: CMakeFiles/sensor_msgs_generate_messages_cpp.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/griffin_controller.dir/build.make CMakeFiles/griffin_controller.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/griffin_controller.dir/build.make CMakeFiles/griffin_controller.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num=8,9 "Built target griffin_controller"
+.PHONY : CMakeFiles/griffin_controller.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/griffin_controller.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/griffin_controller.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/griffin_controller.dir/rule
+
+# Convenience name for target.
+griffin_controller: CMakeFiles/griffin_controller.dir/rule
+
+.PHONY : griffin_controller
+
+# clean rule for target.
+CMakeFiles/griffin_controller.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/griffin_controller.dir/build.make CMakeFiles/griffin_controller.dir/clean
+.PHONY : CMakeFiles/griffin_controller.dir/clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/trajectory_msgs_generate_messages_cpp.dir
 
 # All Build rule for target.
 CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/build.make CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/build.make CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num= "Built target trajectory_msgs_generate_messages_cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num= "Built target trajectory_msgs_generate_messages_cpp"
 .PHONY : CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -1332,14 +1479,14 @@ CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/clean:
 CMakeFiles/geometry_msgs_generate_messages_cpp.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make CMakeFiles/geometry_msgs_generate_messages_cpp.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num= "Built target geometry_msgs_generate_messages_cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num= "Built target geometry_msgs_generate_messages_cpp"
 .PHONY : CMakeFiles/geometry_msgs_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/geometry_msgs_generate_messages_cpp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -1359,14 +1506,14 @@ CMakeFiles/geometry_msgs_generate_messages_cpp.dir/clean:
 CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/build.make CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/build.make CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num= "Built target trajectory_msgs_generate_messages_lisp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num= "Built target trajectory_msgs_generate_messages_lisp"
 .PHONY : CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -1386,14 +1533,14 @@ CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/clean:
 CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/build.make CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/build.make CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num= "Built target trajectory_msgs_generate_messages_nodejs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num= "Built target trajectory_msgs_generate_messages_nodejs"
 .PHONY : CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -1413,14 +1560,14 @@ CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/clean:
 CMakeFiles/nav_msgs_generate_messages_cpp.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/nav_msgs_generate_messages_cpp.dir/build.make CMakeFiles/nav_msgs_generate_messages_cpp.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/nav_msgs_generate_messages_cpp.dir/build.make CMakeFiles/nav_msgs_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num= "Built target nav_msgs_generate_messages_cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num= "Built target nav_msgs_generate_messages_cpp"
 .PHONY : CMakeFiles/nav_msgs_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/nav_msgs_generate_messages_cpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/nav_msgs_generate_messages_cpp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/nav_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -1440,14 +1587,14 @@ CMakeFiles/nav_msgs_generate_messages_cpp.dir/clean:
 CMakeFiles/sensor_msgs_generate_messages_eus.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sensor_msgs_generate_messages_eus.dir/build.make CMakeFiles/sensor_msgs_generate_messages_eus.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sensor_msgs_generate_messages_eus.dir/build.make CMakeFiles/sensor_msgs_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num= "Built target sensor_msgs_generate_messages_eus"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num= "Built target sensor_msgs_generate_messages_eus"
 .PHONY : CMakeFiles/sensor_msgs_generate_messages_eus.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/sensor_msgs_generate_messages_eus.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -1467,14 +1614,14 @@ CMakeFiles/sensor_msgs_generate_messages_eus.dir/clean:
 CMakeFiles/std_msgs_generate_messages_cpp.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make CMakeFiles/std_msgs_generate_messages_cpp.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make CMakeFiles/std_msgs_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num= "Built target std_msgs_generate_messages_cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num= "Built target std_msgs_generate_messages_cpp"
 .PHONY : CMakeFiles/std_msgs_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/std_msgs_generate_messages_cpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/std_msgs_generate_messages_cpp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -1494,14 +1641,14 @@ CMakeFiles/std_msgs_generate_messages_cpp.dir/clean:
 CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/build.make CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/build.make CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num= "Built target actionlib_msgs_generate_messages_cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num= "Built target actionlib_msgs_generate_messages_cpp"
 .PHONY : CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -1521,14 +1668,14 @@ CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/clean:
 CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_nodejs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_nodejs"
 .PHONY : CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -1548,14 +1695,14 @@ CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/clean:
 CMakeFiles/nav_msgs_generate_messages_lisp.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/nav_msgs_generate_messages_lisp.dir/build.make CMakeFiles/nav_msgs_generate_messages_lisp.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/nav_msgs_generate_messages_lisp.dir/build.make CMakeFiles/nav_msgs_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num= "Built target nav_msgs_generate_messages_lisp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num= "Built target nav_msgs_generate_messages_lisp"
 .PHONY : CMakeFiles/nav_msgs_generate_messages_lisp.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/nav_msgs_generate_messages_lisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/nav_msgs_generate_messages_lisp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/nav_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -1575,14 +1722,14 @@ CMakeFiles/nav_msgs_generate_messages_lisp.dir/clean:
 CMakeFiles/nav_msgs_generate_messages_nodejs.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/nav_msgs_generate_messages_nodejs.dir/build.make CMakeFiles/nav_msgs_generate_messages_nodejs.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/nav_msgs_generate_messages_nodejs.dir/build.make CMakeFiles/nav_msgs_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num= "Built target nav_msgs_generate_messages_nodejs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num= "Built target nav_msgs_generate_messages_nodejs"
 .PHONY : CMakeFiles/nav_msgs_generate_messages_nodejs.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/nav_msgs_generate_messages_nodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/nav_msgs_generate_messages_nodejs.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/nav_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -1602,14 +1749,14 @@ CMakeFiles/nav_msgs_generate_messages_nodejs.dir/clean:
 CMakeFiles/std_msgs_generate_messages_py.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/std_msgs_generate_messages_py.dir/build.make CMakeFiles/std_msgs_generate_messages_py.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/std_msgs_generate_messages_py.dir/build.make CMakeFiles/std_msgs_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num= "Built target std_msgs_generate_messages_py"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num= "Built target std_msgs_generate_messages_py"
 .PHONY : CMakeFiles/std_msgs_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/std_msgs_generate_messages_py.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/std_msgs_generate_messages_py.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/std_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -1629,14 +1776,14 @@ CMakeFiles/std_msgs_generate_messages_py.dir/clean:
 CMakeFiles/nav_msgs_generate_messages_py.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/nav_msgs_generate_messages_py.dir/build.make CMakeFiles/nav_msgs_generate_messages_py.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/nav_msgs_generate_messages_py.dir/build.make CMakeFiles/nav_msgs_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num= "Built target nav_msgs_generate_messages_py"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num= "Built target nav_msgs_generate_messages_py"
 .PHONY : CMakeFiles/nav_msgs_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/nav_msgs_generate_messages_py.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/nav_msgs_generate_messages_py.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/nav_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -1656,14 +1803,14 @@ CMakeFiles/nav_msgs_generate_messages_py.dir/clean:
 CMakeFiles/mav_msgs_generate_messages_lisp.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mav_msgs_generate_messages_lisp.dir/build.make CMakeFiles/mav_msgs_generate_messages_lisp.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mav_msgs_generate_messages_lisp.dir/build.make CMakeFiles/mav_msgs_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num= "Built target mav_msgs_generate_messages_lisp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num= "Built target mav_msgs_generate_messages_lisp"
 .PHONY : CMakeFiles/mav_msgs_generate_messages_lisp.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/mav_msgs_generate_messages_lisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/mav_msgs_generate_messages_lisp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/mav_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -1683,14 +1830,14 @@ CMakeFiles/mav_msgs_generate_messages_lisp.dir/clean:
 CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/build.make CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/build.make CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num= "Built target actionlib_msgs_generate_messages_lisp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num= "Built target actionlib_msgs_generate_messages_lisp"
 .PHONY : CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -1710,14 +1857,14 @@ CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/clean:
 CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/build.make CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/build.make CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num= "Built target actionlib_msgs_generate_messages_nodejs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num= "Built target actionlib_msgs_generate_messages_nodejs"
 .PHONY : CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -1737,14 +1884,14 @@ CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/clean:
 CMakeFiles/roscpp_generate_messages_eus.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/roscpp_generate_messages_eus.dir/build.make CMakeFiles/roscpp_generate_messages_eus.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/roscpp_generate_messages_eus.dir/build.make CMakeFiles/roscpp_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num= "Built target roscpp_generate_messages_eus"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num= "Built target roscpp_generate_messages_eus"
 .PHONY : CMakeFiles/roscpp_generate_messages_eus.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/roscpp_generate_messages_eus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/roscpp_generate_messages_eus.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/roscpp_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -1764,14 +1911,14 @@ CMakeFiles/roscpp_generate_messages_eus.dir/clean:
 CMakeFiles/roscpp_generate_messages_py.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/roscpp_generate_messages_py.dir/build.make CMakeFiles/roscpp_generate_messages_py.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/roscpp_generate_messages_py.dir/build.make CMakeFiles/roscpp_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num= "Built target roscpp_generate_messages_py"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num= "Built target roscpp_generate_messages_py"
 .PHONY : CMakeFiles/roscpp_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/roscpp_generate_messages_py.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/roscpp_generate_messages_py.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/roscpp_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -1791,14 +1938,14 @@ CMakeFiles/roscpp_generate_messages_py.dir/clean:
 CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_eus"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_eus"
 .PHONY : CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -1818,14 +1965,14 @@ CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/clean:
 CMakeFiles/sensor_msgs_generate_messages_cpp.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make CMakeFiles/sensor_msgs_generate_messages_cpp.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num= "Built target sensor_msgs_generate_messages_cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num= "Built target sensor_msgs_generate_messages_cpp"
 .PHONY : CMakeFiles/sensor_msgs_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/sensor_msgs_generate_messages_cpp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -1845,14 +1992,14 @@ CMakeFiles/sensor_msgs_generate_messages_cpp.dir/clean:
 gtest/googlemock/CMakeFiles/gmock_main.dir/all:
 	$(MAKE) $(MAKESILENT) -f gtest/googlemock/CMakeFiles/gmock_main.dir/build.make gtest/googlemock/CMakeFiles/gmock_main.dir/depend
 	$(MAKE) $(MAKESILENT) -f gtest/googlemock/CMakeFiles/gmock_main.dir/build.make gtest/googlemock/CMakeFiles/gmock_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num=4,5,6,7 "Built target gmock_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num=4,5,6,7 "Built target gmock_main"
 .PHONY : gtest/googlemock/CMakeFiles/gmock_main.dir/all
 
 # Build rule for subdir invocation for target.
 gtest/googlemock/CMakeFiles/gmock_main.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gtest/googlemock/CMakeFiles/gmock_main.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
 .PHONY : gtest/googlemock/CMakeFiles/gmock_main.dir/rule
 
 # Convenience name for target.
@@ -1872,14 +2019,14 @@ gtest/googlemock/CMakeFiles/gmock_main.dir/clean:
 gtest/googlemock/CMakeFiles/gmock.dir/all:
 	$(MAKE) $(MAKESILENT) -f gtest/googlemock/CMakeFiles/gmock.dir/build.make gtest/googlemock/CMakeFiles/gmock.dir/depend
 	$(MAKE) $(MAKESILENT) -f gtest/googlemock/CMakeFiles/gmock.dir/build.make gtest/googlemock/CMakeFiles/gmock.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num=1,2,3 "Built target gmock"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num=1,2,3 "Built target gmock"
 .PHONY : gtest/googlemock/CMakeFiles/gmock.dir/all
 
 # Build rule for subdir invocation for target.
 gtest/googlemock/CMakeFiles/gmock.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gtest/googlemock/CMakeFiles/gmock.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
 .PHONY : gtest/googlemock/CMakeFiles/gmock.dir/rule
 
 # Convenience name for target.
@@ -1899,14 +2046,14 @@ gtest/googlemock/CMakeFiles/gmock.dir/clean:
 gtest/googlemock/gtest/CMakeFiles/gtest.dir/all:
 	$(MAKE) $(MAKESILENT) -f gtest/googlemock/gtest/CMakeFiles/gtest.dir/build.make gtest/googlemock/gtest/CMakeFiles/gtest.dir/depend
 	$(MAKE) $(MAKESILENT) -f gtest/googlemock/gtest/CMakeFiles/gtest.dir/build.make gtest/googlemock/gtest/CMakeFiles/gtest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num=8,9 "Built target gtest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num=12,13 "Built target gtest"
 .PHONY : gtest/googlemock/gtest/CMakeFiles/gtest.dir/all
 
 # Build rule for subdir invocation for target.
 gtest/googlemock/gtest/CMakeFiles/gtest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gtest/googlemock/gtest/CMakeFiles/gtest.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
 .PHONY : gtest/googlemock/gtest/CMakeFiles/gtest.dir/rule
 
 # Convenience name for target.
@@ -1926,14 +2073,14 @@ gtest/googlemock/gtest/CMakeFiles/gtest.dir/clean:
 gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/all: gtest/googlemock/gtest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/build.make gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/depend
 	$(MAKE) $(MAKESILENT) -f gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/build.make gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num=10,11 "Built target gtest_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles --progress-num=14,15 "Built target gtest_main"
 .PHONY : gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/all
 
 # Build rule for subdir invocation for target.
 gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/griffin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/martin/catkin_ws/src/rotors_simulator/rotors_control/cmake-build-debug/CMakeFiles 0
 .PHONY : gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/rule
 
 # Convenience name for target.
