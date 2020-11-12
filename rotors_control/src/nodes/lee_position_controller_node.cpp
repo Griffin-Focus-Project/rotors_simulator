@@ -98,7 +98,7 @@ void LeePositionControllerNode::InitializeParams() {
 void LeePositionControllerNode::Publish() {
 }
 
-void LeePositionControllerNode::CommandPoseCallback(
+void LeePositionControllerNode::CommandPoseCallback(  //Gibt pose msg an controller
     const geometry_msgs::PoseStampedConstPtr& pose_msg) {
   // Clear all pending commands.
   command_timer_.stop();
@@ -114,7 +114,7 @@ void LeePositionControllerNode::CommandPoseCallback(
 }
 
 void LeePositionControllerNode::MultiDofJointTrajectoryCallback(
-    const trajectory_msgs::MultiDOFJointTrajectoryConstPtr& msg) {
+    const trajectory_msgs::MultiDOFJointTrajectoryConstPtr& msg) { //gibt trajectory msg an commands
   // Clear all pending commands.
   command_timer_.stop();
   commands_.clear();
