@@ -3,10 +3,16 @@
 namespace rotors_control {
 
     GriffinController::GriffinController()
-            : controller_active_(false) {
+            : controller_active_(false),
+            initialized_params_(false) {
+        InitializeParameters();
     }
 
     GriffinController::~GriffinController() {}
+
+    void GriffinController::InitializeParameters() {
+        calculateAllocation(&(controller_parameters_.allocation_matrix_));
+    }
 
 
     void GriffinController::CalculateRotorVelocities(Eigen::VectorXd* rotor_velocities) const {
@@ -23,12 +29,6 @@ namespace rotors_control {
 
         Eigen::Vector3d torques;
         ComputeDesiredTorques(forces, &torques);
-
-        Eigen::MatrixXd Allocation_Matrix;
-        Allocation_Matrix.resize(6,10);//TODO which size and initialize
-        Allocation_Matrix.setOnes();
-
-
 
         Eigen::MatrixXd Allocation_Matrix_PseudoInverse = Allocation_Matrix.transpose() * ((Allocation_Matrix * Allocation_Matrix.transpose()).inverse()); // A^{ \dagger} = A^T*(A*A^T)^{-1}
         Eigen::VectorXd forces_torques(forces.size() + torques.size());
