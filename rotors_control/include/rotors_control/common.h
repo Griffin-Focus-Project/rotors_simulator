@@ -107,6 +107,17 @@ inline void calculateAllocationMatrix(const RotorConfiguration& rotor_configurat
 
 }
 
+inline void calculateAllocation(const RotorConfiguration& rotor_configuration,
+                                Eigen::MatrixXd* allocation_matrix){
+    assert(allocation_matrix != nullptr);
+    allocation_matrix->resize(6,10);
+
+    allocation_matrix->setOnes();
+
+
+//TODO set allocation matrix with rotorforce constants
+}
+
 inline void skewMatrixFromVector(Eigen::Vector3d& vector, Eigen::Matrix3d* skew_matrix) {
   *skew_matrix << 0, -vector.z(), vector.y(),
                   vector.z(), 0, -vector.x(),
