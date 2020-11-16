@@ -25,7 +25,8 @@ namespace rotors_control {
         ComputeDesiredTorques(forces, &torques);
 
         Eigen::MatrixXd Allocation_Matrix;
-        Allocation_Matrix.resize(6,10); //TODO which size and initialize
+        Allocation_Matrix.resize(6,10);//TODO which size and initialize
+        Allocation_Matrix.setOnes();
 
 
 
@@ -57,10 +58,12 @@ namespace rotors_control {
         Eigen::Vector3d velocity_error;
         velocity_error = velocity_W - command_trajectory_.velocity_W;
 
+        Eigen::Vector3d gravity_vec(0,0,1); //TODO -1 oder 1??
 
-        *forces = vehicle_parameters_.mass_*(R_W_I.transpose()*(- position_error.cwiseProduct(controller_parameters_.position_gain_)
-                - velocity_error.cwiseProduct(controller_parameters_.velocity_gain_) + command_trajectory_.acceleration_W
-                - vehicle_parameters_.gravity_) + odometry_.angular_velocity.cross(R_W_I.transpose()*odometry_.velocity));
+
+        *forces = vehicle_parameters_.mass_*(R_W_I.transpose()*(( -position_error.cwiseProduct(controller_parameters_.position_gain_))
+                - velocity_error.cwiseProduct(controller_parameters_.velocity_gain_) + command_trajectory_.acceleration_W - gravity_vec * vehicle_parameters_.gravity_)
+                        + odometry_.angular_velocity.cross(R_W_I.transpose()*odometry_.velocity));
 
     }
 
@@ -78,11 +81,13 @@ namespace rotors_control {
 
         Eigen::Matrix3d R_SP = command_trajectory_.orientation_W_B.toRotationMatrix();     //Orientation Matrix setpoint
         Eigen::Matrix3d R = odometry_.orientation.toRotationMatrix();
-        Eigen::Vector3d orientation_error = 0.5 * (R_SP.transpose() * R - R.transpose() * R_SP);   //e_R
+        Eigen::Matrix3d orientation_error_matrix = 0.5 * (R_SP.transpose() * R - R.transpose() * R_SP);
+        Eigen::Vector3d orientation_error;
+        vectorFromSkewMatrix(orientation_error_matrix, &orientation_error);
 
-        Eigen::Vector3d angular_rate_error = odometry_.angular_velocity - R.transpose() * R_SP * command_trajectory_.angular_acceleration_W //e_omega
+        Eigen::Vector3d angular_rate_error = odometry_.angular_velocity - R.transpose() * (R_SP * command_trajectory_.angular_acceleration_W); //e_omega
 
-        *torques = Inertia_Matrix * ( - controller_parameters_.orientation_gain_ * orientation_error - controller_parameters_.angular_rate_gain_ * angular_rate_error)
+        *torques = Inertia_Matrix * ( - orientation_error.cwiseProduct(controller_parameters_.orientation_gain_) - angular_rate_error.cwiseProduct(controller_parameters_.angular_rate_gain_))
                     + odometry_.angular_velocity.cross(Inertia_Matrix * odometry_.angular_velocity) + x_com.cross(forces);
     }
 }
