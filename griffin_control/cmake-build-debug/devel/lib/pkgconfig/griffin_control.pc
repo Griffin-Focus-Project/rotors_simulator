@@ -1,8 +1,0 @@
-prefix=/home/griffin/catkin_ws/src/rotors_simulator/griffin_control/cmake-build-debug/devel
-
-Name: griffin_control
-Description: Description of griffin_control
-Version: 0.0.0
-Cflags: -I/home/griffin/catkin_ws/src/rotors_simulator/griffin_control/include -I/usr/include/eigen3
-Libs: -L${prefix}/lib -lposition_controller
-Requires: roscpp mav_msgs nav_msgs
