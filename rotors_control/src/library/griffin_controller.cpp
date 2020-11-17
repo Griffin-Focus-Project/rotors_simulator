@@ -11,16 +11,27 @@ namespace rotors_control {
     GriffinController::~GriffinController() {}
 
     void GriffinController::InitializeParameters() {
+
         calculateAllocation(&(controller_parameters_.allocation_matrix_));
+        Allocation_Matrix_PseudoInverse = controller_parameters_.allocation_matrix_.transpose()
+                                                          * ((controller_parameters_.allocation_matrix_ * controller_parameters_.allocation_matrix_.transpose()).inverse()); // A^{ \dagger} = A^T*(A*A^T)^{-1}
+
+        Inertia_Matrix.setZero();
+        Inertia_Matrix = vehicle_parameters_.inertia_;
+
+
+        initialized_params_ = true;
+
     }
 
 
-    void GriffinController::CalculateRotorVelocities(Eigen::VectorXd* rotor_velocities) const {
-        assert(rotor_velocities);
+    void GriffinController::CalculateRotorOutputs(Eigen::VectorXd* rotor_outputs) const {
+        assert(rotor_outputs);
+        assert(initialized_params_);
 
         // Return 0 velocities on all rotors, until the first command is received.
         if (!controller_active_) {
-            *rotor_velocities = Eigen::VectorXd::Zero(rotor_velocities->rows());
+            *rotor_outputs = Eigen::VectorXd::Zero(rotor_outputs->rows());
             return;
         }
 
@@ -30,10 +41,10 @@ namespace rotors_control {
         Eigen::Vector3d torques;
         ComputeDesiredTorques(forces, &torques);
 
-        Eigen::MatrixXd Allocation_Matrix_PseudoInverse = Allocation_Matrix.transpose() * ((Allocation_Matrix * Allocation_Matrix.transpose()).inverse()); // A^{ \dagger} = A^T*(A*A^T)^{-1}
+
         Eigen::VectorXd forces_torques(forces.size() + torques.size());
         forces_torques << forces, torques;
-        *rotor_velocities = Allocation_Matrix_PseudoInverse * forces_torques;
+        *rotor_outputs = Allocation_Matrix_PseudoInverse * forces_torques;
     }
 
     void GriffinController::SetOdometry(const EigenOdometry& odometry) {
@@ -58,7 +69,7 @@ namespace rotors_control {
         Eigen::Vector3d velocity_error;
         velocity_error = velocity_W - command_trajectory_.velocity_W;
 
-        Eigen::Vector3d gravity_vec(0,0,1); //TODO -1 oder 1??
+        Eigen::Vector3d gravity_vec(Eigen::Vector3d::UnitZ()); //
 
 
         *forces = vehicle_parameters_.mass_*(R_W_I.transpose()*(( -position_error.cwiseProduct(controller_parameters_.position_gain_))
@@ -72,10 +83,7 @@ namespace rotors_control {
                                                          Eigen::Vector3d* torques) const {
         assert(torques);
 
-        Eigen::Matrix3d Inertia_Matrix = Eigen::Matrix3d::Zero();
-        Inertia_Matrix(0,0) = kDefaultInertiaXx;
-        Inertia_Matrix(1,1) = kDefaultInertiaYy;
-        Inertia_Matrix(2,2) = kDefaultInertiaZz;
+
         Eigen::Vector3d x_com(0 , 0 , 0);  //TODO x_com (center of mass offset)
 
 

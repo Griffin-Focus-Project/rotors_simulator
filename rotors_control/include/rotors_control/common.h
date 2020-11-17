@@ -26,6 +26,7 @@
 #include <mav_msgs/conversions.h>
 #include <mav_msgs/default_topics.h>
 #include <nav_msgs/Odometry.h>
+#include <cmath>
 
 #include "rotors_control/parameters.h"
 
@@ -107,15 +108,47 @@ inline void calculateAllocationMatrix(const RotorConfiguration& rotor_configurat
 
 }
 
-inline void calculateAllocation(const RotorConfiguration& rotor_configuration,
-                                Eigen::MatrixXd* allocation_matrix){
+inline void calculateAllocation(Eigen::MatrixXd* allocation_matrix){
     assert(allocation_matrix != nullptr);
     allocation_matrix->resize(6,10);
 
-    allocation_matrix->setOnes();
+    double front_arm_length = 0.4;
+    double back_arm_length = 0.6;
+    double rotor_force_constant =  8.54858e-6;
+
+    allocation_matrix->setZero();
+    (*allocation_matrix)(1,0) = 8/5;
+    (*allocation_matrix)(3,0) = -(8*front_arm_length/5);
+
+    (*allocation_matrix)(0,1) = 8/5;
+    (*allocation_matrix)(4,1) = 8*front_arm_length/5;
+
+    (*allocation_matrix)(1,2) = -(4/5);
+    (*allocation_matrix)(2,2) = (4*pow(3,0.5)/5);
+    (*allocation_matrix)(3,2) = -(8*front_arm_length/5);
+
+    (*allocation_matrix)(0,3) = 8/5;
+    (*allocation_matrix)(4,3) = -(4*front_arm_length)/5;
+    (*allocation_matrix)(5,3) = (4*pow(3,0.5)*front_arm_length)/5;
+
+    (*allocation_matrix)(1,4) = -4/5;
+    (*allocation_matrix)(2,4) = -(4*pow(3,0.5)/5);
+    (*allocation_matrix)(3,4) = -(8*front_arm_length/5);
+
+    (*allocation_matrix)(0,5) = 8/5;
+    (*allocation_matrix)(4,5) = -(4*front_arm_length)/5;
+    (*allocation_matrix)(5,5) = -(4*pow(3,0.5)*front_arm_length/5);
+
+    (*allocation_matrix)(1,6) = 8/5;
+    (*allocation_matrix)(3,6) = 0; //almost zero
+    (*allocation_matrix)(5,6) = -(8*back_arm_length/5);
+
+    (*allocation_matrix)(0,7) = 0; //almost zero
+    (*allocation_matrix)(2,7) = 8/5;
+    (*allocation_matrix)(4,7) = 1.6*back_arm_length;
 
 
-//TODO set allocation matrix with rotorforce constants
+    (*allocation_matrix) *= rotor_force_constant;
 }
 
 inline void skewMatrixFromVector(Eigen::Vector3d& vector, Eigen::Matrix3d* skew_matrix) {

@@ -23,7 +23,7 @@ namespace rotors_control {
                   velocity_gain_(kDefaultVelocityGain),
                   orientation_gain_(kDefaultOrientationGain),
                   angular_rate_gain_(kDefaultAngularRateGain) {
-            calculateAllocation(rotor_configuration_, &allocation_matrix_);
+            calculateAllocation(&allocation_matrix_);
         }
         Eigen::MatrixXd allocation_matrix_;
         Eigen::Vector3d position_gain_;
@@ -38,7 +38,7 @@ namespace rotors_control {
         GriffinController();
         ~GriffinController();
         void InitializeParameters();
-        void CalculateRotorVelocities(Eigen::VectorXd* rotor_velocities) const;
+        void CalculateRotorOutputs(Eigen::VectorXd* rotor_outputs) const;
 
         void SetOdometry(const EigenOdometry& odometry);
         void SetTrajectoryPoint(
@@ -51,6 +51,9 @@ namespace rotors_control {
     private:
         bool controller_active_;
         bool initialized_params_;
+
+        Eigen::MatrixXd Allocation_Matrix_PseudoInverse;
+        Eigen::Matrix3d Inertia_Matrix;
 
         mav_msgs::EigenTrajectoryPoint command_trajectory_;
         EigenOdometry odometry_;

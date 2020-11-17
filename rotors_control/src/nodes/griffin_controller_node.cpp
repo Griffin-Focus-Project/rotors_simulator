@@ -66,6 +66,7 @@ namespace rotors_control {
         GetRosParameter(private_nh_, "angular_rate_gain/x",
                         griffin_controller_.controller_parameters_.angular_rate_gain_.x(),
                         &griffin_controller_.controller_parameters_.angular_rate_gain_.x());
+
         GetRosParameter(private_nh_, "angular_rate_gain/y",
                         griffin_controller_.controller_parameters_.angular_rate_gain_.y(),
                         &griffin_controller_.controller_parameters_.angular_rate_gain_.y());
@@ -77,7 +78,7 @@ namespace rotors_control {
     void GriffinControllerNode::Publish() {
     }
 
-    void GriffinControllerNode::CommandPoseCallback(  //Gibt pose msg an controller
+    void GriffinControllerNode::CommandPoseCallback(  //Listens for a single pose (no derivatives) and controller tries to continuously achieve this pose.
             const geometry_msgs::PoseStampedConstPtr& pose_msg) {
         // Clear all pending commands.
         command_timer_.stop();
@@ -93,7 +94,8 @@ namespace rotors_control {
     }
 
     void GriffinControllerNode::MultiDofJointTrajectoryCallback(
-            const trajectory_msgs::MultiDOFJointTrajectoryConstPtr& msg) { //gibt trajectory msg an commands
+            const trajectory_msgs::MultiDOFJointTrajectoryConstPtr& msg) { //listens for trajectory with poses, twists, acceleraeions from a tajectory generator
+
         // Clear all pending commands.
         command_timer_.stop();
         commands_.clear();
@@ -157,15 +159,15 @@ namespace rotors_control {
         eigenOdometryFromMsg(odometry_msg, &odometry);
         griffin_controller_.SetOdometry(odometry);
 
-        Eigen::VectorXd ref_rotor_velocities;
-        griffin_controller_.CalculateRotorVelocities(&ref_rotor_velocities);
+        Eigen::VectorXd ref_rotor_outputs;
+        griffin_controller_.CalculateRotorOutputs(&ref_rotor_outputs);
 
         // Todo(ffurrer): Do this in the conversions header.
         mav_msgs::ActuatorsPtr actuator_msg(new mav_msgs::Actuators);
 
         actuator_msg->angular_velocities.clear();
-        for (int i = 0; i < ref_rotor_velocities.size(); i++)
-            actuator_msg->angular_velocities.push_back(ref_rotor_velocities[i]);
+        for (int i = 0; i < 3; i++)
+            actuator_msg->angular_velocities.push_back(ref_rotor_outputs[i]);
         actuator_msg->header.stamp = odometry_msg->header.stamp;
 
         motor_velocity_reference_pub_.publish(actuator_msg);
