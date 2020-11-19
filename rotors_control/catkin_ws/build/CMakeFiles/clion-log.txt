@@ -1,36 +1,18 @@
 /snap/clion/129/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCATKIN_DEVEL_PREFIX:PATH=catkin_ws/devel -G "CodeBlocks - Unix Makefiles" /home/griffin/catkin_ws/src/rotors_simulator/rotors_control
-<<<<<<< HEAD
-=======
--- The C compiler identification is GNU 7.5.0
--- The CXX compiler identification is GNU 7.5.0
--- Check for working C compiler: /usr/bin/cc
--- Check for working C compiler: /usr/bin/cc - works
--- Detecting C compiler ABI info
--- Detecting C compiler ABI info - done
--- Detecting C compile features
--- Detecting C compile features - done
--- Check for working CXX compiler: /usr/bin/c++
--- Check for working CXX compiler: /usr/bin/c++ - works
--- Detecting CXX compiler ABI info
--- Detecting CXX compiler ABI info - done
--- Detecting CXX compile features
--- Detecting CXX compile features - done
->>>>>>> griffin
-CMake Error at CMakeLists.txt:6 (find_package):
-  By not providing "Findcatkin.cmake" in CMAKE_MODULE_PATH this project has
-  asked CMake to find a package configuration file provided by "catkin", but
-  CMake did not find one.
-
-  Could not find a package configuration file provided by "catkin" with any
-  of the following names:
-
-    catkinConfig.cmake
-    catkin-config.cmake
-
-  Add the installation prefix of "catkin" to CMAKE_PREFIX_PATH or set
-  "catkin_DIR" to a directory containing one of the above files.  If "catkin"
-  provides a separate development package or SDK, be sure it has been
-  installed.
+-- Using CATKIN_DEVEL_PREFIX: catkin_ws/devel
+-- Using CMAKE_PREFIX_PATH: /home/griffin/catkin_ws/devel/.private/catkin_tools_prebuild;/home/griffin/catkin_ws/devel;/opt/ros/melodic
+-- This workspace overlays: /home/griffin/catkin_ws/devel/.private/catkin_tools_prebuild;/home/griffin/catkin_ws/devel;/opt/ros/melodic
+-- Found PythonInterp: /usr/bin/python2 (found suitable version "2.7.17", minimum required is "2") 
+-- Using PYTHON_EXECUTABLE: /usr/bin/python2
+-- Using Debian Python package layout
+-- Using empy: /usr/bin/empy
+CMake Error at /opt/ros/melodic/share/catkin/cmake/list_insert_in_workspace_order.cmake:8 (message):
+  The path 'catkin_ws/devel' is in CATKIN_WORKSPACES but does not have a
+  .catkin file
+Call Stack (most recent call first):
+  /opt/ros/melodic/share/catkin/cmake/all.cmake:164 (include)
+  /opt/ros/melodic/share/catkin/cmake/catkinConfig.cmake:20 (include)
+  CMakeLists.txt:6 (find_package)
 
 
 -- Configuring incomplete, errors occurred!
