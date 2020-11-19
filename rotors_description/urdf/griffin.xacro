@@ -29,7 +29,7 @@
     <xacro:property name="rotor_velocity_slowdown_sim" value="10"/>
     <xacro:property name="use_mesh_file_core" value="true"/>
     <xacro:property name="use_mesh_file_rotor_unit" value="true"/>
-    <xacro:property name="mesh_file_core" value="package://rotors_description/meshes/test.dae"/>
+    <xacro:property name="mesh_file_core" value="package://rotors_description/meshes/sketch.dae"/>
     <xacro:property name="mesh_file_tilt_unit" value="package://rotors_description/meshes/omav/omav_tiltarm.dae"/>-->
 
     <xacro:property name="mass_core" value="2.30"/>    <!-- [kg] -->
@@ -37,8 +37,8 @@
     <xacro:property name="body_width" value="0.22"/>    <!-- [m] -->
     <xacro:property name="body_height" value="0.35"/>    <!-- [m] -->
     <xacro:property name="mass_rotor" value="0.0065"/>    <!-- [kg] -->
-    <xacro:property name="arm_length_front" value="0.600"/>    <!-- [m] -->
-    <xacro:property name="arm_length_back" value="0.4"/>
+    <xacro:property name="arm_length_front" value="0.4"/>    <!-- [m] -->
+    <xacro:property name="arm_length_back" value="0.6"/>
     <xacro:property name="rotor_offset_top" value="0.060"/>    <!-- [m] -->
     <xacro:property name="radius_rotor" value="0.1143"/>    <!-- [m] -->
     <xacro:property name="motor_constant" value="${7.2e-06}"/>    <!-- [kg m/s^2] -->
@@ -120,7 +120,7 @@
     p_gain="${tilt_p_gain}"
     i_gain="${tilt_i_gain}"
     d_gain="${tilt_d_gain}">
-    <origin xyz="0 -${arm_length_front*sin60} ${arm_length_front*cos60}" rpy="-1.0471975512 0 0"/>
+    <origin xyz="${arm_length_front} 0 0" rpy="0 0 0"/>
     <xacro:insert_block name="rotor_inertia" />
   </xacro:double_tilt_unit>
 
@@ -149,7 +149,7 @@
     p_gain="${tilt_p_gain}"
     i_gain="${tilt_i_gain}"
     d_gain="${tilt_d_gain}">
-    <origin xyz="0 ${arm_length_front*sin60} ${arm_length_front*cos60}" rpy="1.0471975512 0 0"/>
+    <origin xyz="-${arm_length_front*cos60} ${arm_length_front*sin60} 0" rpy="0 0 2.09439510239"/>
     <xacro:insert_block name="rotor_inertia" />
   </xacro:double_tilt_unit>
 
@@ -178,7 +178,7 @@
     p_gain="${tilt_p_gain}"
     i_gain="${tilt_i_gain}"
     d_gain="${tilt_d_gain}">
-    <origin xyz="0 0 ${arm_length_front}" rpy="0 0 3.14159265359"/>
+    <origin xyz="-${arm_length_front*cos60} -${arm_length_front*sin60} 0" rpy="0 0 -2.09439510239"/>
     <xacro:insert_block name="rotor_inertia" />
   </xacro:double_tilt_unit>
 
@@ -206,7 +206,7 @@
     p_gain="${tilt_p_gain}"
     i_gain="${tilt_i_gain}"
     d_gain="${tilt_d_gain}">
-    <origin xyz="-${arm_length_back} 0 0" rpy="0 0 3.14159265359"/>
+    <origin xyz="0 0 ${arm_length_back}" rpy="0 -1.57079632679 0"/>
     <xacro:insert_block name="rotor_inertia" />
   </xacro:double_tilt_unit>
 
