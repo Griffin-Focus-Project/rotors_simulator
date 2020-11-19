@@ -1,1 +1,19 @@
-CMakeLists.txt not found in /home/griffin/catkin_ws/src/rotors_simulator/rotors_control Select CMakeLists.txt file...
+/snap/clion/129/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCATKIN_DEVEL_PREFIX:PATH=catkin_ws/devel -G "CodeBlocks - Unix Makefiles" /home/griffin/catkin_ws/src/rotors_simulator/rotors_control
+-- Using CATKIN_DEVEL_PREFIX: catkin_ws/devel
+-- Using CMAKE_PREFIX_PATH: /home/griffin/catkin_ws/devel/.private/catkin_tools_prebuild;/home/griffin/catkin_ws/devel;/opt/ros/melodic
+-- This workspace overlays: /home/griffin/catkin_ws/devel/.private/catkin_tools_prebuild;/home/griffin/catkin_ws/devel;/opt/ros/melodic
+-- Found PythonInterp: /usr/bin/python2 (found suitable version "2.7.17", minimum required is "2") 
+-- Using PYTHON_EXECUTABLE: /usr/bin/python2
+-- Using Debian Python package layout
+-- Using empy: /usr/bin/empy
+CMake Error at /opt/ros/melodic/share/catkin/cmake/list_insert_in_workspace_order.cmake:8 (message):
+  The path 'catkin_ws/devel' is in CATKIN_WORKSPACES but does not have a
+  .catkin file
+Call Stack (most recent call first):
+  /opt/ros/melodic/share/catkin/cmake/all.cmake:164 (include)
+  /opt/ros/melodic/share/catkin/cmake/catkinConfig.cmake:20 (include)
+  CMakeLists.txt:6 (find_package)
+
+
+-- Configuring incomplete, errors occurred!
+See also "/home/griffin/catkin_ws/src/rotors_simulator/rotors_control/catkin_ws/build/CMakeFiles/CMakeOutput.log".
