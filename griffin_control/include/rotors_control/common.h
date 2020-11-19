@@ -77,44 +77,19 @@ inline void eigenOdometryFromMsg(const nav_msgs::OdometryConstPtr& msg,
   odometry->angular_velocity = mav_msgs::vector3FromMsg(msg->twist.twist.angular);
 }
 
-inline void calculateAllocationMatrix(const RotorConfiguration& rotor_configuration,
-                                      Eigen::Matrix4Xd* allocation_matrix) {
-  assert(allocation_matrix != nullptr);
-  allocation_matrix->resize(4, rotor_configuration.rotors.size());
-  unsigned int i = 0;
-  for (const Rotor& rotor : rotor_configuration.rotors) {
-    // Set first row of allocation matrix.
-    (*allocation_matrix)(0, i) = sin(rotor.angle) * rotor.arm_length
-                                 * rotor.rotor_force_constant;
-    // Set second row of allocation matrix.
-    (*allocation_matrix)(1, i) = -cos(rotor.angle) * rotor.arm_length
-                                 * rotor.rotor_force_constant;
-    // Set third row of allocation matrix.
-    (*allocation_matrix)(2, i) = -rotor.direction * rotor.rotor_force_constant
-                                 * rotor.rotor_moment_constant;
-    // Set forth row of allocation matrix.
-    (*allocation_matrix)(3, i) = rotor.rotor_force_constant;
-    ++i;
-  }
-  Eigen::FullPivLU<Eigen::Matrix4Xd> lu(*allocation_matrix);
-  // Setting the threshold for when pivots of the rank calculation should be considered nonzero.
-  lu.setThreshold(1e-9);
-  int rank = lu.rank();
-  if (rank < 4) {
-    std::cout << "The rank of the allocation matrix is " << lu.rank()
-              << ", it should have rank 4, to have a fully controllable system,"
-              << " check your configuration." << std::endl;
-  }
 
-}
-
-inline void calculateAllocation(Eigen::MatrixXd* allocation_matrix){
+inline void calculateAllocation(const RotorConfiguration& rotor_configuration,
+                                Eigen::MatrixXd* allocation_matrix){
     assert(allocation_matrix != nullptr);
     allocation_matrix->resize(6,10);
 
-    double front_arm_length = 0.4;
-    double back_arm_length = 0.6;
+
+
+    double front_arm_length = rotor_configuration.rotors[0].arm_length; //TODO does this work??
+    double back_arm_length = rotor_configuration.rotors[3].arm_length;
     double rotor_force_constant =  8.54858e-6;
+
+
 
     allocation_matrix->setZero();
     (*allocation_matrix)(1,0) = 8/5;

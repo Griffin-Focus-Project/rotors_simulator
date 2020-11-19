@@ -162,7 +162,7 @@ namespace rotors_control {
         Eigen::VectorXd ref_rotor_outputs;
         griffin_controller_.CalculateRotorOutputs(&ref_rotor_outputs);
 
-        // Todo(ffurrer): Do this in the conversions header.
+        // TODO: Output for angles and rotorvelocities
         mav_msgs::ActuatorsPtr actuator_msg(new mav_msgs::Actuators);
 
         actuator_msg->angular_velocities.clear();
