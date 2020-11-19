@@ -23,7 +23,7 @@ namespace rotors_control {
                   velocity_gain_(kDefaultVelocityGain),
                   orientation_gain_(kDefaultOrientationGain),
                   angular_rate_gain_(kDefaultAngularRateGain) {
-            calculateAllocation(&allocation_matrix_);
+            calculateAllocation(rotor_configuration_, &allocation_matrix_);
         }
         Eigen::MatrixXd allocation_matrix_;
         Eigen::Vector3d position_gain_;

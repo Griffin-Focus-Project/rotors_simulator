@@ -30,16 +30,14 @@ inline void GetRotorConfiguration(const ros::NodeHandle& nh,
       rotor_configuration->rotors.clear();
     }
     Rotor rotor;
-    nh.getParam(rotor_configuration_string + std::to_string(i) + "/angle",
-                 rotor.angle);
+    nh.getParam(rotor_configuration_string + std::to_string(i) + "/gamma",
+                 rotor.gamma);
+    nh.getParam(rotor_configuration_string + std::to_string(i) + "/phi",
+                  rotor.phi);
     nh.getParam(rotor_configuration_string + std::to_string(i) + "/arm_length",
                  rotor.arm_length);
     nh.getParam(rotor_configuration_string + std::to_string(i) + "/rotor_force_constant",
                  rotor.rotor_force_constant);
-    nh.getParam(rotor_configuration_string + std::to_string(i) + "/rotor_moment_constant",
-                 rotor.rotor_moment_constant);
-    nh.getParam(rotor_configuration_string + std::to_string(i) + "/direction",
-                 rotor.direction);
     rotor_configuration->rotors.push_back(rotor);
     ++i;
   }
