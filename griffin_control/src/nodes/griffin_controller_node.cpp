@@ -162,13 +162,17 @@ namespace rotors_control {
         Eigen::VectorXd ref_rotor_outputs;
         griffin_controller_.CalculateRotorOutputs(&ref_rotor_outputs);
 
-        // TODO: Output for angles and rotorvelocities
+
         mav_msgs::ActuatorsPtr actuator_msg(new mav_msgs::Actuators);
 
         actuator_msg->angular_velocities.clear();
         for (int i = 0; i < 3; i++)
             actuator_msg->angular_velocities.push_back(ref_rotor_outputs[i]);
+
+        for (int i = 4; i < 7; i++)
+            actuator_msg->angles.push_back(ref_rotor_outputs[i]);
         actuator_msg->header.stamp = odometry_msg->header.stamp;
+
 
         motor_velocity_reference_pub_.publish(actuator_msg);
     }

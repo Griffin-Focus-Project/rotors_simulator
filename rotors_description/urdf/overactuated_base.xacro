@@ -284,14 +284,14 @@
     </gazebo>
 
     <!-- Lower Rotor -->
-    <joint name="rotor_${motor_number+6}_joint" type="continuous">
+    <joint name="rotor_${motor_number+4}_joint" type="continuous">
       <origin xyz="0 0 ${-rotor_offset_top}" rpy="0 0 0" />
       <axis xyz="0 0 1" />
       <parent link="${namespace}/tilt_unit_${motor_number}" />
-      <child link="rotor_${motor_number+6}" />
+      <child link="rotor_${motor_number+4}" />
     </joint>
 
-    <link name="rotor_${motor_number+6}">
+    <link name="rotor_${motor_number+4}">
       <inertial>
         <mass value="${mass_rotor}" /> <!-- [kg] -->
         <xacro:insert_block name="inertia" />
@@ -312,8 +312,8 @@
     <gazebo>
       <plugin name="${suffix}_lower_motor_model" filename="librotors_gazebo_motor_model.so">
         <robotNamespace>${robot_namespace}</robotNamespace>
-        <jointName>rotor_${motor_number+6}_joint</jointName>
-        <linkName>rotor_${motor_number+6}</linkName>
+        <jointName>rotor_${motor_number+4}_joint</jointName>
+        <linkName>rotor_${motor_number+4}</linkName>
         <turningDirection>${direction_lower}</turningDirection>
         <timeConstantUp>${time_constant_up}</timeConstantUp>
         <timeConstantDown>${time_constant_down}</timeConstantDown>
@@ -321,14 +321,14 @@
         <motorConstant>${motor_constant_lower}</motorConstant>
         <momentConstant>${moment_constant_lower}</momentConstant>
         <commandSubTopic>/gazebo/command/motor_speed</commandSubTopic>
-        <motorNumber>${motor_number+6}</motorNumber>
+        <motorNumber>${motor_number+4}</motorNumber>
         <rotorDragCoefficient>${rotor_drag_coefficient}</rotorDragCoefficient>
         <rollingMomentCoefficient>${rolling_moment_coefficient}</rollingMomentCoefficient>
         <motorSpeedPubTopic>/motor_speed/${motor_number}_lower</motorSpeedPubTopic>
         <rotorVelocitySlowdownSim>${rotor_velocity_slowdown_sim}</rotorVelocitySlowdownSim>
       </plugin>
     </gazebo>
-    <gazebo reference="rotor_${motor_number+6}">
+    <gazebo reference="rotor_${motor_number+4}">
       <material>Gazebo/${color}</material>
     </gazebo>
   </xacro:macro>
