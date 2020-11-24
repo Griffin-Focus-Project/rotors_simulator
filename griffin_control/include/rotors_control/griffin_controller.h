@@ -6,6 +6,7 @@
 
 #include "rotors_control/common.h"
 #include "rotors_control/parameters.h"
+#include <math.h>
 
 namespace rotors_control {
 

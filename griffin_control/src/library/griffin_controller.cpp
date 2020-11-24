@@ -35,6 +35,9 @@ namespace rotors_control {
             return;
         }
 
+        rotor_outputs->resize(12,1);
+        rotor_outputs->setZero();
+
         Eigen::Vector3d forces;
         ComputeDesiredForces(&forces);
 
@@ -44,7 +47,18 @@ namespace rotors_control {
 
         Eigen::VectorXd forces_torques(forces.size() + torques.size());
         forces_torques << forces, torques;
-        *rotor_outputs = Allocation_Matrix_PseudoInverse * forces_torques;
+        Eigen::VectorXd combined_output;
+        combined_output.resize(12,1);
+        combined_output = Allocation_Matrix_PseudoInverse * forces_torques;
+
+
+        for (int i = 0; i < 3; i++) {
+            (*rotor_outputs)(i+8,0) = atan2(combined_output(2*i,0), combined_output(2*i+1,0)); //angles from 8-11
+            (*rotor_outputs)(i,0) = sin((*rotor_outputs)(i+8,0))*combined_output(2*i,0) + cos((*rotor_outputs)(i+8,0))*combined_output(2*i+1,0); //velocities from 0-7
+            (*rotor_outputs)(i,0) = sqrt((*rotor_outputs)(i,0));
+            (*rotor_outputs)(i+4,0) = (*rotor_outputs)(i,0);
+        }
+
     }
 
     void GriffinController::SetOdometry(const EigenOdometry& odometry) {
