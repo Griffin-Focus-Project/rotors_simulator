@@ -15,8 +15,8 @@
 #include <ros/ros.h>
 #include <trajectory_msgs/MultiDOFJointTrajectory.h>
 
-#include "rotors_control/common.h"
-#include "rotors_control/griffin_controller.h"
+#include "griffin_control/common.h"
+#include "griffin_contol/griffin_controller.h"
 
 namespace rotors_control {
 

@@ -97,7 +97,7 @@
 
   <!-- Instantiate rotors -->
   <xacro:double_tilt_unit robot_namespace="${namespace}"
-    suffix="left"
+    suffix="0"
     direction_upper="ccw"
     direction_lower="cw"
     motor_constant="${motor_constant}"
@@ -126,7 +126,7 @@
 
   <xacro:double_tilt_unit
     robot_namespace="${namespace}"
-    suffix="right"
+    suffix="1"
     direction_upper="cw"
     direction_lower="ccw"
     motor_constant="${motor_constant}"
@@ -155,7 +155,7 @@
 
   <xacro:double_tilt_unit
     robot_namespace="${namespace}"
-    suffix="down"
+    suffix="2"
     direction_upper="ccw"
     direction_lower="cw"
     motor_constant="${motor_constant}"
@@ -183,7 +183,7 @@
   </xacro:double_tilt_unit>
 
   <xacro:double_tilt_unit robot_namespace="${namespace}"
-    suffix="back"
+    suffix="3"
     direction_upper="cw"
     direction_lower="ccw"
     motor_constant="${motor_constant}"

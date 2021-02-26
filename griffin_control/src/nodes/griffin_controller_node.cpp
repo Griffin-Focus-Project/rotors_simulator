@@ -3,7 +3,7 @@
 
 #include "griffin_controller_node.h"
 
-#include "rotors_control/parameters_ros.h"
+#include "griffin_control/parameters_ros.h"
 
 namespace rotors_control {
 
@@ -22,7 +22,7 @@ namespace rotors_control {
                 &GriffinControllerNode::MultiDofJointTrajectoryCallback, this);
 
         odometry_sub_ = nh_.subscribe(mav_msgs::default_topics::ODOMETRY, 1,
-                                      &GriffinControllerNode::OdometryCallback, this);
+                                      &GriffinControllerNode::OdometryCallback, this); //TODO should this be nav_msgs??
 
         motor_velocity_reference_pub_ = nh_.advertise<mav_msgs::Actuators>(
                 mav_msgs::default_topics::COMMAND_ACTUATORS, 1);
@@ -153,7 +153,7 @@ namespace rotors_control {
 
     void GriffinControllerNode::OdometryCallback(const nav_msgs::OdometryConstPtr& odometry_msg) {
 
-        ROS_INFO_ONCE("LeePositionController got first odometry message.");
+        ROS_INFO_ONCE("GriffinController got first odometry message.");
 
         EigenOdometry odometry;
         eigenOdometryFromMsg(odometry_msg, &odometry);
