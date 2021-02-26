@@ -1,4 +1,4 @@
-#include "rotors_control/griffin_controller.h"
+#include "griffin_control/griffin_controller.h"
 
 namespace rotors_control {
 

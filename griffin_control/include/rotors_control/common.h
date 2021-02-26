@@ -87,7 +87,7 @@ inline void calculateAllocation(const RotorConfiguration& rotor_configuration,
 
     double front_arm_length = rotor_configuration.rotors[0].arm_length; //TODO does this work??
     double back_arm_length = rotor_configuration.rotors[3].arm_length;
-    double rotor_force_constant =  8.54858e-6;
+    double rotor_force_constant =  8.54858e-6; //TODO import this from yaml file
 
 
 
