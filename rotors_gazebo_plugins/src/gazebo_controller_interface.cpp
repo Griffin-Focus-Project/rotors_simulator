@@ -75,10 +75,10 @@ void GazeboControllerInterface::OnUpdate(const common::UpdateInfo& /*_info*/) {
     gzdbg << __FUNCTION__ << "() called." << std::endl;
   }
 
-  if (!pubs_and_subs_created_) {
-    CreatePubsAndSubs();
-    pubs_and_subs_created_ = true;
-  }
+    if (!pubs_and_subs_created_) {
+        CreatePubsAndSubs();
+        pubs_and_subs_created_ = true;
+    }
 
   if (!received_first_reference_) {
     return;
