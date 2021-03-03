@@ -28,8 +28,8 @@
         <robotNamespace>$(arg mav_name)</robotNamespace>
         <rotors>
             <rotor>
-              <jointName>rotor_0_joint</jointName>
-              <linkName>rotor_0</linkName>
+              <jointName>rotor_01_joint</jointName>
+              <linkName>rotor_01</linkName>
               <spinDirection>ccw</spinDirection>
               <timeConstantUp>${time_constant_up}</timeConstantUp>
               <timeConstantDown>${time_constant_down}</timeConstantDown>
@@ -42,8 +42,8 @@
               <rotorVelocitySlowdownSim>${rotor_velocity_slowdown_sim}</rotorVelocitySlowdownSim>
             </rotor>
             <rotor>
-              <jointName>rotor_1_joint</jointName>
-              <linkName>rotor_1</linkName>
+              <jointName>rotor_02_joint</jointName>
+              <linkName>rotor_02</linkName>
               <spinDirection>cw</spinDirection>
               <timeConstantUp>${time_constant_up}</timeConstantUp>
               <timeConstantDown>${time_constant_down}</timeConstantDown>
@@ -56,8 +56,8 @@
               <rotorVelocitySlowdownSim>${rotor_velocity_slowdown_sim}</rotorVelocitySlowdownSim>
             </rotor>
             <rotor>
-              <jointName>rotor_2_joint</jointName>
-              <linkName>rotor_2</linkName>
+              <jointName>rotor_11_joint</jointName>
+              <linkName>rotor_11</linkName>
               <spinDirection>ccw</spinDirection>
               <timeConstantUp>${time_constant_up}</timeConstantUp>
               <timeConstantDown>${time_constant_down}</timeConstantDown>
@@ -70,8 +70,8 @@
               <rotorVelocitySlowdownSim>${rotor_velocity_slowdown_sim}</rotorVelocitySlowdownSim>
             </rotor>
             <rotor>
-              <jointName>rotor_3_joint</jointName>
-              <linkName>rotor_3</linkName>
+              <jointName>rotor_12_joint</jointName>
+              <linkName>rotor_12</linkName>
               <spinDirection>cw</spinDirection>
               <timeConstantUp>${time_constant_up}</timeConstantUp>
               <timeConstantDown>${time_constant_down}</timeConstantDown>
@@ -82,6 +82,62 @@
               <rotorDragCoefficient>${rotor_drag_coefficient}</rotorDragCoefficient>
               <rollingMomentCoefficient>${rolling_moment_coefficient}</rollingMomentCoefficient>
               <rotorVelocitySlowdownSim>${rotor_velocity_slowdown_sim}</rotorVelocitySlowdownSim>
+            </rotor>
+            <rotor>
+                <jointName>rotor_21_joint</jointName>
+                <linkName>rotor_21</linkName>
+                <spinDirection>ccw</spinDirection>
+                <timeConstantUp>${time_constant_up}</timeConstantUp>
+                <timeConstantDown>${time_constant_down}</timeConstantDown>
+                <minRotVelocity>${min_rot_velocity}</minRotVelocity>
+                <maxRotVelocity>${max_rot_velocity}</maxRotVelocity>
+                <thrustConstant>${motor_constant}</thrustConstant>
+                <momentConstant>${moment_constant}</momentConstant>
+                <rotorDragCoefficient>${rotor_drag_coefficient}</rotorDragCoefficient>
+                <rollingMomentCoefficient>${rolling_moment_coefficient}</rollingMomentCoefficient>
+                <rotorVelocitySlowdownSim>${rotor_velocity_slowdown_sim}</rotorVelocitySlowdownSim>
+            </rotor>
+            <rotor>
+                <jointName>rotor_22_joint</jointName>
+                <linkName>rotor_22</linkName>
+                <spinDirection>cw</spinDirection>
+                <timeConstantUp>${time_constant_up}</timeConstantUp>
+                <timeConstantDown>${time_constant_down}</timeConstantDown>
+                <minRotVelocity>${min_rot_velocity}</minRotVelocity>
+                <maxRotVelocity>${max_rot_velocity}</maxRotVelocity>
+                <thrustConstant>${motor_constant}</thrustConstant>
+                <momentConstant>${moment_constant}</momentConstant>
+                <rotorDragCoefficient>${rotor_drag_coefficient}</rotorDragCoefficient>
+                <rollingMomentCoefficient>${rolling_moment_coefficient}</rollingMomentCoefficient>
+                <rotorVelocitySlowdownSim>${rotor_velocity_slowdown_sim}</rotorVelocitySlowdownSim>
+            </rotor>
+            <rotor>
+                <jointName>rotor_31_joint</jointName>
+                <linkName>rotor_31</linkName>
+                <spinDirection>ccw</spinDirection>
+                <timeConstantUp>${time_constant_up}</timeConstantUp>
+                <timeConstantDown>${time_constant_down}</timeConstantDown>
+                <minRotVelocity>${min_rot_velocity}</minRotVelocity>
+                <maxRotVelocity>${max_rot_velocity}</maxRotVelocity>
+                <thrustConstant>${motor_constant}</thrustConstant>
+                <momentConstant>${moment_constant}</momentConstant>
+                <rotorDragCoefficient>${rotor_drag_coefficient}</rotorDragCoefficient>
+                <rollingMomentCoefficient>${rolling_moment_coefficient}</rollingMomentCoefficient>
+                <rotorVelocitySlowdownSim>${rotor_velocity_slowdown_sim}</rotorVelocitySlowdownSim>
+            </rotor>
+            <rotor>
+                <jointName>rotor_32_joint</jointName>
+                <linkName>rotor_32</linkName>
+                <spinDirection>cw</spinDirection>
+                <timeConstantUp>${time_constant_up}</timeConstantUp>
+                <timeConstantDown>${time_constant_down}</timeConstantDown>
+                <minRotVelocity>${min_rot_velocity}</minRotVelocity>
+                <maxRotVelocity>${max_rot_velocity}</maxRotVelocity>
+                <thrustConstant>${motor_constant}</thrustConstant>
+                <momentConstant>${moment_constant}</momentConstant>
+                <rotorDragCoefficient>${rotor_drag_coefficient}</rotorDragCoefficient>
+                <rollingMomentCoefficient>${rolling_moment_coefficient}</rollingMomentCoefficient>
+                <rotorVelocitySlowdownSim>${rotor_velocity_slowdown_sim}</rotorVelocitySlowdownSim>
             </rotor>
         </rotors>
 
