@@ -82,9 +82,13 @@
           mass="${mass_core}"
           body_width="${body_width}"
           body_height="${body_height}"
-          use_mesh_file="${use_mesh_file_core}"
+          use_mesh_file="false"
+          mesh_file="false"
+          collision_mesh_file="false">
+
+         <!-- use_mesh_file="${use_mesh_file_core}"
           mesh_file="${mesh_file_core}"
-          collision_mesh_file="${mesh_file_core_collision}">
+          collision_mesh_file="${mesh_file_core_collision}"-->
     <xacro:insert_block name="body_origin"/>
     <xacro:insert_block name="body_inertia"/>
     <xacro:insert_block name="body_inertia_origin"/>
@@ -92,9 +96,11 @@
 
   <!-- Instantiate rotors -->
   <!-- front0-->
-  <xacro:single_tilt_unit_minimal
+
+  <xacro:double_tilt_unit_minimal
           robot_namespace="${namespace}"
-          direction="ccw"
+          direction_upper="ccw"
+          direction_lower="cw"
           parent="${tilt_unit_parent}"
           mass_rotor="${mass_rotor}"
           mass_tilt_unit="${mass_tilt_unit}"
@@ -105,12 +111,13 @@
           color="Black">
     <origin xyz="${arm_length_front} 0 0" rpy="0 0 0"/>
     <xacro:insert_block name="rotor_inertia" />
-  </xacro:single_tilt_unit_minimal>
+  </xacro:double_tilt_unit_minimal>
 
   <!-- front1 -->
-  <xacro:single_tilt_unit_minimal
+  <xacro:double_tilt_unit_minimal
           robot_namespace="${namespace}"
-          direction="cw"
+          direction_upper="ccw"
+          direction_lower="cw"
           parent="${tilt_unit_parent}"
           mass_rotor="${mass_rotor}"
           mass_tilt_unit="${mass_tilt_unit}"
@@ -121,12 +128,13 @@
           color="Black">
     <origin xyz="-${arm_length_front*cos60} ${arm_length_front*sin60} 0" rpy="0 0 2.09439510239"/>
     <xacro:insert_block name="rotor_inertia" />
-  </xacro:single_tilt_unit_minimal>
+  </xacro:double_tilt_unit_minimal>
 
   <!-- front2 -->
-  <xacro:single_tilt_unit_minimal
+  <xacro:double_tilt_unit_minimal
           robot_namespace="${namespace}"
-          direction="ccw"
+          direction_upper="ccw"
+          direction_lower="cw"
           parent="${tilt_unit_parent}"
           mass_rotor="${mass_rotor}"
           mass_tilt_unit="${mass_tilt_unit}"
@@ -137,12 +145,13 @@
           color="Orange">
     <origin xyz="-${arm_length_front*cos60} -${arm_length_front*sin60} 0" rpy="0 0 -2.09439510239"/>
     <xacro:insert_block name="rotor_inertia" />
-  </xacro:single_tilt_unit_minimal>
+  </xacro:double_tilt_unit_minimal>
 
   <!-- back3 -->
-  <xacro:single_tilt_unit_minimal
+  <xacro:double_tilt_unit_minimal
           robot_namespace="${namespace}"
-          direction="cw"
+          direction_upper="ccw"
+          direction_lower="cw"
           parent="${tilt_unit_parent}"
           mass_rotor="${mass_rotor}"
           mass_tilt_unit="${mass_tilt_unit}"
@@ -153,6 +162,6 @@
           color="DarkGrey">
     <origin xyz="0 0 ${arm_length_back}" rpy="0 -1.57079632679 0"/>
     <xacro:insert_block name="rotor_inertia" />
-  </xacro:single_tilt_unit_minimal>
+  </xacro:double_tilt_unit_minimal>
 
 </robot>
