@@ -3,7 +3,7 @@
 
 #include "griffin_controller_node.h"
 
-#include "griffin_control/parameters_ros.h"
+#include "rotors_control/parameters_ros.h"
 
 namespace rotors_control {
 

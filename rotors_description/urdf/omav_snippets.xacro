@@ -314,14 +314,14 @@
     </gazebo>
 
     <!-- Upper Rotor -->
-    <joint name="rotor_${motor_number}1_joint" type="continuous">
+    <joint name="rotor_${motor_number}_joint" type="continuous">
       <origin xyz="0 0 ${rotor_offset_top}" rpy="0 0 0" />
       <axis xyz="0 0 1" />
       <parent link="${namespace}/tilt_unit_${motor_number}" />
-      <child link="rotor_${motor_number}1" />
+      <child link="rotor_${motor_number}" />
     </joint>
 
-    <link name="rotor_${motor_number}1">
+    <link name="rotor_${motor_number}">
       <inertial>
         <mass value="${mass_rotor}" /> <!-- [kg] -->
         <xacro:insert_block name="inertia" />
@@ -340,19 +340,19 @@
     </link>
 
 
-    <gazebo reference="rotor_${motor_number}1">
+    <gazebo reference="rotor_${motor_number}">
       <material>Gazebo/${color}</material>
     </gazebo>
 
     <!-- Lower Rotor -->
-    <joint name="rotor_${motor_number}2_joint" type="continuous">
+    <joint name="rotor_${motor_number+4}_joint" type="continuous">
       <origin xyz="0 0 ${-rotor_offset_top}" rpy="0 0 0" />
       <axis xyz="0 0 1" />
       <parent link="${namespace}/tilt_unit_${motor_number}" />
-      <child link="rotor_${motor_number}2" />
+      <child link="rotor_${motor_number+4}" />
     </joint>
 
-    <link name="rotor_${motor_number}2">
+    <link name="rotor_${motor_number+4}">
       <inertial>
         <mass value="${mass_rotor}" /> <!-- [kg] -->
         <xacro:insert_block name="inertia" />
@@ -370,7 +370,7 @@
       </collision>
     </link>
 
-    <gazebo reference="rotor_${motor_number}2">
+    <gazebo reference="rotor_${motor_number+4}">
       <material>Gazebo/${color}</material>
     </gazebo>
   </xacro:macro>

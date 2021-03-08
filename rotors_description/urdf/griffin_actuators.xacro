@@ -28,8 +28,8 @@
         <robotNamespace>$(arg mav_name)</robotNamespace>
         <rotors>
             <rotor>
-              <jointName>rotor_01_joint</jointName>
-              <linkName>rotor_01</linkName>
+              <jointName>rotor_0_joint</jointName>
+              <linkName>rotor_0</linkName>
               <spinDirection>ccw</spinDirection>
               <timeConstantUp>${time_constant_up}</timeConstantUp>
               <timeConstantDown>${time_constant_down}</timeConstantDown>
@@ -42,8 +42,8 @@
               <rotorVelocitySlowdownSim>${rotor_velocity_slowdown_sim}</rotorVelocitySlowdownSim>
             </rotor>
             <rotor>
-              <jointName>rotor_02_joint</jointName>
-              <linkName>rotor_02</linkName>
+              <jointName>rotor_4_joint</jointName>
+              <linkName>rotor_4</linkName>
               <spinDirection>cw</spinDirection>
               <timeConstantUp>${time_constant_up}</timeConstantUp>
               <timeConstantDown>${time_constant_down}</timeConstantDown>
@@ -56,8 +56,8 @@
               <rotorVelocitySlowdownSim>${rotor_velocity_slowdown_sim}</rotorVelocitySlowdownSim>
             </rotor>
             <rotor>
-              <jointName>rotor_11_joint</jointName>
-              <linkName>rotor_11</linkName>
+              <jointName>rotor_1_joint</jointName>
+              <linkName>rotor_1</linkName>
               <spinDirection>ccw</spinDirection>
               <timeConstantUp>${time_constant_up}</timeConstantUp>
               <timeConstantDown>${time_constant_down}</timeConstantDown>
@@ -70,8 +70,8 @@
               <rotorVelocitySlowdownSim>${rotor_velocity_slowdown_sim}</rotorVelocitySlowdownSim>
             </rotor>
             <rotor>
-              <jointName>rotor_12_joint</jointName>
-              <linkName>rotor_12</linkName>
+              <jointName>rotor_5_joint</jointName>
+              <linkName>rotor_5</linkName>
               <spinDirection>cw</spinDirection>
               <timeConstantUp>${time_constant_up}</timeConstantUp>
               <timeConstantDown>${time_constant_down}</timeConstantDown>
@@ -84,8 +84,8 @@
               <rotorVelocitySlowdownSim>${rotor_velocity_slowdown_sim}</rotorVelocitySlowdownSim>
             </rotor>
             <rotor>
-                <jointName>rotor_21_joint</jointName>
-                <linkName>rotor_21</linkName>
+                <jointName>rotor_2_joint</jointName>
+                <linkName>rotor_2</linkName>
                 <spinDirection>ccw</spinDirection>
                 <timeConstantUp>${time_constant_up}</timeConstantUp>
                 <timeConstantDown>${time_constant_down}</timeConstantDown>
@@ -98,8 +98,8 @@
                 <rotorVelocitySlowdownSim>${rotor_velocity_slowdown_sim}</rotorVelocitySlowdownSim>
             </rotor>
             <rotor>
-                <jointName>rotor_22_joint</jointName>
-                <linkName>rotor_22</linkName>
+                <jointName>rotor_6_joint</jointName>
+                <linkName>rotor_6</linkName>
                 <spinDirection>cw</spinDirection>
                 <timeConstantUp>${time_constant_up}</timeConstantUp>
                 <timeConstantDown>${time_constant_down}</timeConstantDown>
@@ -112,8 +112,8 @@
                 <rotorVelocitySlowdownSim>${rotor_velocity_slowdown_sim}</rotorVelocitySlowdownSim>
             </rotor>
             <rotor>
-                <jointName>rotor_31_joint</jointName>
-                <linkName>rotor_31</linkName>
+                <jointName>rotor_3_joint</jointName>
+                <linkName>rotor_3</linkName>
                 <spinDirection>ccw</spinDirection>
                 <timeConstantUp>${time_constant_up}</timeConstantUp>
                 <timeConstantDown>${time_constant_down}</timeConstantDown>
@@ -126,8 +126,8 @@
                 <rotorVelocitySlowdownSim>${rotor_velocity_slowdown_sim}</rotorVelocitySlowdownSim>
             </rotor>
             <rotor>
-                <jointName>rotor_32_joint</jointName>
-                <linkName>rotor_32</linkName>
+                <jointName>rotor_7_joint</jointName>
+                <linkName>rotor_7</linkName>
                 <spinDirection>cw</spinDirection>
                 <timeConstantUp>${time_constant_up}</timeConstantUp>
                 <timeConstantDown>${time_constant_down}</timeConstantDown>
