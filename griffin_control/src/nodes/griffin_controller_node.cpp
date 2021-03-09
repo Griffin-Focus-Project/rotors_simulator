@@ -22,7 +22,7 @@ namespace rotors_control {
                 &GriffinControllerNode::MultiDofJointTrajectoryCallback, this);
 
         odometry_sub_ = nh_.subscribe(mav_msgs::default_topics::ODOMETRY, 1,
-                                      &GriffinControllerNode::OdometryCallback, this); //TODO should this be nav_msgs??
+                                      &GriffinControllerNode::OdometryCallback, this);
 
         motor_velocity_reference_pub_ = nh_.advertise<mav_msgs::Actuators>(
                 mav_msgs::default_topics::COMMAND_ACTUATORS, 1);
@@ -165,11 +165,17 @@ namespace rotors_control {
 
         mav_msgs::ActuatorsPtr actuator_msg(new mav_msgs::Actuators);
 
-        actuator_msg->angular_velocities.clear();
+        actuator_msg->angular_velocities.clear(); //TODO motors from 0-7,servos 8-11
         for (int i = 0; i < 3; i++)
             actuator_msg->angular_velocities.push_back(ref_rotor_outputs[i]);
+        for (int i = 0; i < 3; i++)
+            actuator_msg->angular_velocities.push_back(ref_rotor_outputs[i]);
+        ROS_INFO_ONCE("First rotor output" + ref_rotor_outputs[0]);
 
-        for (int i = 4; i < 7; i++)
+
+        for(int i= 0; i < 7; i++)
+            actuator_msg->angles.push_back(0);
+        for (int i = 7; i < 11; i++)
             actuator_msg->angles.push_back(ref_rotor_outputs[i]);
         actuator_msg->header.stamp = odometry_msg->header.stamp;
 
