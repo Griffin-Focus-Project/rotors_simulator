@@ -54,6 +54,8 @@
   <xacro:property name="cos60" value="0.5"/>
   <xacro:property name="sin60" value="0.866025403784"/>
 
+  <xacro:property name="num_rotor_groups" value="4"/>
+
   <!-- Property Blocks -->
   <xacro:property name="body_inertia">
     <inertia ixx="0.30015" ixy="${-6.707e-5}" ixz="${2.937e-3}" iyy="0.2979" iyz="${1.257e-5}" izz="0.04738"/>
@@ -103,6 +105,7 @@
           mass_tilt_unit="${mass_tilt_unit}"
           rotor_offset_top="${rotor_offset_top}"
           motor_number="0"
+          lower_start_index="${num_rotor_groups}"
           mesh="propeller"
           mesh_tilt_unit="${mesh_file_tilt_unit}"
           color="Black">
@@ -120,6 +123,7 @@
           mass_tilt_unit="${mass_tilt_unit}"
           rotor_offset_top="${rotor_offset_top}"
           motor_number="1"
+          lower_start_index="${num_rotor_groups}"
           mesh="propeller"
           mesh_tilt_unit="${mesh_file_tilt_unit}"
           color="Black">
@@ -137,6 +141,7 @@
           mass_tilt_unit="${mass_tilt_unit}"
           rotor_offset_top="${rotor_offset_top}"
           motor_number="2"
+          lower_start_index="${num_rotor_groups}"
           mesh="propeller"
           mesh_tilt_unit="${mesh_file_tilt_unit}"
           color="Orange">
@@ -154,6 +159,7 @@
           mass_tilt_unit="${mass_tilt_unit_back}"
           rotor_offset_top="${rotor_offset_top}"
           motor_number="3"
+          lower_start_index="${num_rotor_groups}"
           mesh="propeller"
           mesh_tilt_unit="${mesh_file_tilt_unit}"
           color="DarkGrey">

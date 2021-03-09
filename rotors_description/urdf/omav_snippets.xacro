@@ -430,4 +430,103 @@
     </gazebo>
   </xacro:macro>
 
+  <!-- Tilting double rotor unit link and joint. -->
+  <xacro:macro name="double_tilt_unit_minimal"
+    params="robot_namespace direction_upper direction_lower parent mass_rotor mass_tilt_unit rotor_offset_top motor_number lower_start_index color mesh mesh_tilt_unit *origin *inertia">
+
+    <!-- Rotor tilt_unit -->
+    <joint name="${robot_namespace}/tilt_unit_${motor_number}_revolutejoint" type="continuous">
+      <xacro:insert_block name="origin" />
+      <axis xyz="1 0 0" />
+      <parent link="${parent}" />
+      <child link="${namespace}/tilt_unit_${motor_number}" />
+    </joint>
+
+    <gazebo reference="${robot_namespace}/tilt_unit_${motor_number}_revolutejoint">
+      <provideFeedback>true</provideFeedback>
+    </gazebo>
+
+    <link name="${namespace}/tilt_unit_${motor_number}">
+      <inertial>
+        <mass value="${mass_tilt_unit}" /> <!-- [kg] -->
+        <xacro:insert_block name="tilt_unit_inertia" />
+      </inertial>
+      <visual>
+        <geometry>
+            <mesh filename="${mesh_tilt_unit}"
+              scale="1 1 1" />
+        </geometry>
+      </visual>
+      <collision>
+        <geometry>
+          <box size="0.005 0.005 0.005"  /> <!-- [m] -->
+        </geometry>
+      </collision>
+    </link>
+
+    <gazebo reference="${namespace}/tilt_unit_${motor_number}">
+      <material>Gazebo/White</material>
+    </gazebo>
+
+    <!-- Upper Rotor -->
+    <joint name="rotor_${motor_number}_joint" type="continuous">
+      <origin xyz="0 0 ${rotor_offset_top}" rpy="0 0 0" />
+      <axis xyz="0 0 1" />
+      <parent link="${namespace}/tilt_unit_${motor_number}" />
+      <child link="rotor_${motor_number}" />
+    </joint>
+
+    <link name="rotor_${motor_number}">
+      <inertial>
+        <mass value="${mass_rotor}" /> <!-- [kg] -->
+        <xacro:insert_block name="inertia" />
+      </inertial>
+      <visual>
+        <geometry>
+          <mesh filename="package://rotors_description/meshes/${mesh}_${direction_upper}.dae"
+            scale="${radius_rotor} ${radius_rotor} ${radius_rotor}" />
+        </geometry>
+      </visual>
+      <collision>
+        <geometry>
+          <cylinder length="0.005" radius="${radius_rotor}" /> <!-- [m] -->
+        </geometry>
+      </collision>
+    </link>
+
+    <gazebo reference="rotor_${motor_number}">
+      <material>Gazebo/${color}</material>
+    </gazebo>
+
+    <!-- Lower Rotor -->
+    <joint name="rotor_${motor_number+lower_start_index}_joint" type="continuous">
+      <origin xyz="0 0 ${-rotor_offset_top}" rpy="0 0 0" />
+      <axis xyz="0 0 1" />
+      <parent link="${namespace}/tilt_unit_${motor_number}" />
+      <child link="rotor_${motor_number+lower_start_index}" />
+    </joint>
+
+    <link name="rotor_${motor_number+lower_start_index}">
+      <inertial>
+        <mass value="${mass_rotor}" /> <!-- [kg] -->
+        <xacro:insert_block name="inertia" />
+      </inertial>
+      <visual>
+        <geometry>
+          <mesh filename="package://rotors_description/meshes/${mesh}_${direction_lower}.dae"
+            scale="${radius_rotor} ${radius_rotor} ${radius_rotor}" />
+        </geometry>
+      </visual>
+      <collision>
+        <geometry>
+          <cylinder length="0.005" radius="${radius_rotor}" /> <!-- [m] -->
+        </geometry>
+      </collision>
+    </link>
+
+    <gazebo reference="rotor_${motor_number+lower_start_index}">
+      <material>Gazebo/${color}</material>
+    </gazebo>
+  </xacro:macro>
+
 </robot>
