@@ -78,16 +78,15 @@ inline void eigenOdometryFromMsg(const nav_msgs::OdometryConstPtr& msg,
 }
 
 
-inline void calculateAllocation(const RotorConfiguration& rotor_configuration,
-                                Eigen::MatrixXd* allocation_matrix){
+inline void calculateAllocation(Eigen::MatrixXd* allocation_matrix, VehicleParameters vehicle_parameters_){
     assert(allocation_matrix != nullptr);
     allocation_matrix->resize(6,10);
 
 
 
-    double front_arm_length = rotor_configuration.rotors[0].arm_length; //TODO does this work??
-    double back_arm_length = rotor_configuration.rotors[3].arm_length;
-    double rotor_force_constant =  rotor_configuration.rotors[0].rotor_force_constant; //TODO import this from yaml file
+    double front_arm_length = vehicle_parameters_.front_arm_length_; //
+    double back_arm_length = vehicle_parameters_.back_arm_length_;
+    double rotor_force_constant = vehicle_parameters_.rotor_force_constant_; //TODO does this work?
 
 
 

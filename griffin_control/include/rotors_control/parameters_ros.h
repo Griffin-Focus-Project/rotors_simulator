@@ -7,69 +7,57 @@
 
 namespace rotors_control {
 
-template<typename T> inline void GetRosParameter(const ros::NodeHandle& nh,
-                                                 const std::string& key,
-                                                 const T& default_value,
-                                                 T* value) {
-  ROS_ASSERT(value != nullptr);
-  bool have_parameter = nh.getParam(key, *value);
-  if (!have_parameter) {
-    ROS_WARN_STREAM("[rosparam]: could not find parameter " << nh.getNamespace()
-                    << "/" << key << ", setting to default: " << default_value);
-    *value = default_value;
-  }
-}
-
-inline void GetRotorConfiguration(const ros::NodeHandle& nh,
-                                  RotorConfiguration* rotor_configuration) {
-  std::map<std::string, double> single_rotor;
-  std::string rotor_configuration_string = "rotor_configuration/";
-  unsigned int i = 0;
-  while (nh.getParam(rotor_configuration_string + std::to_string(i), single_rotor)) {
-    if (i == 0) {
-      rotor_configuration->rotors.clear();
+    template<typename T>
+    inline void GetRosParameter(const ros::NodeHandle &nh,
+                                const std::string &key,
+                                const T &default_value,
+                                T *value) {
+        ROS_ASSERT(value != nullptr);
+        bool have_parameter = nh.getParam(key, *value);
+        if (!have_parameter) {
+            ROS_WARN_STREAM("[rosparam]: could not find parameter " << nh.getNamespace()
+                                                                    << "/" << key << ", setting to default: "
+                                                                    << default_value);
+            *value = default_value;
+        }
     }
-    Rotor rotor;
-    nh.getParam(rotor_configuration_string + std::to_string(i) + "/gamma",
-                 rotor.gamma);
-    nh.getParam(rotor_configuration_string + std::to_string(i) + "/phi",
-                  rotor.phi);
-    nh.getParam(rotor_configuration_string + std::to_string(i) + "/arm_length",
-                 rotor.arm_length);
-    nh.getParam(rotor_configuration_string + std::to_string(i) + "/rotor_force_constant",
-                 rotor.rotor_force_constant);
-    rotor_configuration->rotors.push_back(rotor);
-    ++i;
-  }
-}
 
-inline void GetVehicleParameters(const ros::NodeHandle& nh, VehicleParameters* vehicle_parameters) {
-  GetRosParameter(nh, "mass",
-                  vehicle_parameters->mass_,
-                  &vehicle_parameters->mass_);
-  GetRosParameter(nh, "inertia/xx",
-                  vehicle_parameters->inertia_(0, 0),
-                  &vehicle_parameters->inertia_(0, 0));
-  GetRosParameter(nh, "inertia/xy",
-                  vehicle_parameters->inertia_(0, 1),
-                  &vehicle_parameters->inertia_(0, 1));
-  vehicle_parameters->inertia_(1, 0) = vehicle_parameters->inertia_(0, 1);
-  GetRosParameter(nh, "inertia/xz",
-                  vehicle_parameters->inertia_(0, 2),
-                  &vehicle_parameters->inertia_(0, 2));
-  vehicle_parameters->inertia_(2, 0) = vehicle_parameters->inertia_(0, 2);
-  GetRosParameter(nh, "inertia/yy",
-                  vehicle_parameters->inertia_(1, 1),
-                  &vehicle_parameters->inertia_(1, 1));
-  GetRosParameter(nh, "inertia/yz",
-                  vehicle_parameters->inertia_(1, 2),
-                  &vehicle_parameters->inertia_(1, 2));
-  vehicle_parameters->inertia_(2, 1) = vehicle_parameters->inertia_(1, 2);
-  GetRosParameter(nh, "inertia/zz",
-                  vehicle_parameters->inertia_(2, 2),
-                  &vehicle_parameters->inertia_(2, 2));
-  GetRotorConfiguration(nh, &vehicle_parameters->rotor_configuration_);
-}
+
+    inline void GetVehicleParameters(const ros::NodeHandle &nh, VehicleParameters *vehicle_parameters) {
+        GetRosParameter(nh, "mass",
+                        vehicle_parameters->mass_,
+                        &vehicle_parameters->mass_);
+        GetRosParameter(nh, "rotor_force_constant",
+                        vehicle_parameters->rotor_force_constant_,
+                        &vehicle_parameters->rotor_force_constant_);
+        GetRosParameter(nh, "front_arm_length",
+                        vehicle_parameters->front_arm_length_,
+                        &vehicle_parameters->front_arm_length_);
+        GetRosParameter(nh, "back_arm_length",
+                        vehicle_parameters->back_arm_length_,
+                        &vehicle_parameters->back_arm_length_);
+        GetRosParameter(nh, "inertia/xx",
+                        vehicle_parameters->inertia_(0, 0),
+                        &vehicle_parameters->inertia_(0, 0));
+        GetRosParameter(nh, "inertia/xy",
+                        vehicle_parameters->inertia_(0, 1),
+                        &vehicle_parameters->inertia_(0, 1));
+        vehicle_parameters->inertia_(1, 0) = vehicle_parameters->inertia_(0, 1);
+        GetRosParameter(nh, "inertia/xz",
+                        vehicle_parameters->inertia_(0, 2),
+                        &vehicle_parameters->inertia_(0, 2));
+        vehicle_parameters->inertia_(2, 0) = vehicle_parameters->inertia_(0, 2);
+        GetRosParameter(nh, "inertia/yy",
+                        vehicle_parameters->inertia_(1, 1),
+                        &vehicle_parameters->inertia_(1, 1));
+        GetRosParameter(nh, "inertia/yz",
+                        vehicle_parameters->inertia_(1, 2),
+                        &vehicle_parameters->inertia_(1, 2));
+        vehicle_parameters->inertia_(2, 1) = vehicle_parameters->inertia_(1, 2);
+        GetRosParameter(nh, "inertia/zz",
+                        vehicle_parameters->inertia_(2, 2),
+                        &vehicle_parameters->inertia_(2, 2));
+    }
 }
 
 #endif /* INCLUDE_ROTORS_CONTROL_PARAMETERS_ROS_H_ */

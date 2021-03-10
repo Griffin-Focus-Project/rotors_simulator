@@ -24,14 +24,13 @@ namespace rotors_control {
                   velocity_gain_(kDefaultVelocityGain),
                   orientation_gain_(kDefaultOrientationGain),
                   angular_rate_gain_(kDefaultAngularRateGain) {
-            calculateAllocation(rotor_configuration_, &allocation_matrix_);
+            calculateAllocation(&allocation_matrix_);
         }
         Eigen::MatrixXd allocation_matrix_;
         Eigen::Vector3d position_gain_;
         Eigen::Vector3d velocity_gain_;
         Eigen::Vector3d orientation_gain_;
         Eigen::Vector3d angular_rate_gain_;
-        RotorConfiguration rotor_configuration_;
     };
 
     class GriffinController {

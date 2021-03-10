@@ -13,7 +13,7 @@ namespace rotors_control {
 
     void GriffinController::InitializeParameters() {
 
-        calculateAllocation(vehicle_parameters_.rotor_configuration_, &(controller_parameters_.allocation_matrix_));
+        calculateAllocation(&(controller_parameters_.allocation_matrix_), vehicle_parameters_);
         Allocation_Matrix_PseudoInverse = controller_parameters_.allocation_matrix_.transpose()
                                                           * ((controller_parameters_.allocation_matrix_ * controller_parameters_.allocation_matrix_.transpose()).inverse()); // A^{ \dagger} = A^T*(A*A^T)^{-1}
 
@@ -46,7 +46,7 @@ namespace rotors_control {
         ComputeDesiredTorques(forces, &torques);
 
 
-        Eigen::VectorXd forces_torques(forces.size() + torques.size());
+        Eigen::VectorXd forces_torques;
         forces_torques << forces, torques;
         Eigen::VectorXd combined_output = Allocation_Matrix_PseudoInverse * forces_torques;
         Eigen::Vector3d angles;
@@ -54,7 +54,7 @@ namespace rotors_control {
 
         for(int i = 0; i < 3; i++){
             angles[i] = atan2(combined_output[2*i],combined_output[2*i+1]);
-            velocities[i] = sqrt(pow(combined_output[2*i], 2) + pow(combined_output[2*i+1], 2));
+            velocities[i] = sqrt(pow(combined_output[2*i], 2) + pow(combined_output[2*i+1], 2)); //see Intermediate Report sec: 6
             velocities[i] = sqrt(velocities[i]);
         }
 
@@ -100,11 +100,6 @@ namespace rotors_control {
                                                          Eigen::Vector3d* torques) const {
         assert(torques);
 
-
-        Eigen::Matrix3d Inertia_Matrix = Eigen::Matrix3d::Zero();
-        Inertia_Matrix(0,0) = kDefaultInertiaXx;
-        Inertia_Matrix(1,1) = kDefaultInertiaYy;
-        Inertia_Matrix(2,2) = kDefaultInertiaZz;
 
         Eigen::Vector3d x_com(0 , 0 , 0);  //TODO x_com (center of mass offset)
 

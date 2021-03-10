@@ -1,15 +1,10 @@
 #  vehicle parameters
 mass: 1.56779
 inertia: {xx: 0.0347563, xy: 0.0, xz: 0.0, yy: 0.0458929, yz: 0.0, zz: 0.0977}
+rotor_force_constant: 8.2e-06
+front_arm_length: 0.4
+back_arm_length: 0.59
 
 
-# angle should be expressed in rad
-# direction 1 means counter clockwise, -1 clockwise
-# The order of the rotors matters for the calculation of the allocation matrix.
-rotor_configuration:
-  '0': {gamma: -1.0471975512, phi: 0.0, arm_length: 0.215, rotor_force_constant: 8.54858e-6}
-  '1': {gamma: 1.0471975512, phi: 0.0, arm_length: 0.215, rotor_force_constant: 8.54858e-6}
-  '2': {gamma: 3.14159265359, phi: 0.0, arm_length: 0.215, rotor_force_constant: 8.54858e-6}
-  '3': {gama: 0.0, phi: -1.57079632679, arm_length: 0.215, rotor_force_constant: 8.54858e-6}
 
 

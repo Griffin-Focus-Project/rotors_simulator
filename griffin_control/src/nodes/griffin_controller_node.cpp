@@ -170,7 +170,7 @@ namespace rotors_control {
             actuator_msg->angular_velocities.push_back(ref_rotor_outputs[i]);
         for (int i = 0; i < 3; i++)
             actuator_msg->angular_velocities.push_back(ref_rotor_outputs[i]);
-        ROS_INFO_ONCE("First rotor output" + ref_rotor_outputs[0]);
+        ROS_INFO_ONCE("First rotor output");
 
 
         for(int i= 0; i < 7; i++)
