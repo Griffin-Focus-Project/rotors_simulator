@@ -91,35 +91,33 @@ inline void calculateAllocation(Eigen::MatrixXd* allocation_matrix, VehicleParam
 
 
     allocation_matrix->setZero();
-    (*allocation_matrix)(1,0) = 8/5;
-    (*allocation_matrix)(3,0) = -(8*front_arm_length/5);
+    (*allocation_matrix)(0,0) = 8/5;
+    (*allocation_matrix)(5,0) = -(8*front_arm_length/5);
 
-    (*allocation_matrix)(0,1) = 8/5;
-    (*allocation_matrix)(4,1) = 8*front_arm_length/5;
+    (*allocation_matrix)(2,1) = 8/5;
+    (*allocation_matrix)(3,1) = 8*front_arm_length/5;
 
-    (*allocation_matrix)(1,2) = -(4/5);
-    (*allocation_matrix)(2,2) = (4*pow(3,0.5)/5);
-    (*allocation_matrix)(3,2) = -(8*front_arm_length/5);
+    (*allocation_matrix)(0,2) = -(4/5);
+    (*allocation_matrix)(1,2) = (4*pow(3,0.5)/5);
+    (*allocation_matrix)(5,2) = -(8*front_arm_length/5);
 
-    (*allocation_matrix)(0,3) = 8/5;
-    (*allocation_matrix)(4,3) = -(4*front_arm_length)/5;
-    (*allocation_matrix)(5,3) = (4*pow(3,0.5)*front_arm_length)/5;
+    (*allocation_matrix)(2,3) = 8/5;
+    (*allocation_matrix)(3,3) = -(4*front_arm_length)/5;
+    (*allocation_matrix)(4,3) = (4*pow(3,0.5)*front_arm_length)/5;
 
-    (*allocation_matrix)(1,4) = -4/5;
-    (*allocation_matrix)(2,4) = -(4*pow(3,0.5)/5);
-    (*allocation_matrix)(3,4) = -(8*front_arm_length/5);
+    (*allocation_matrix)(0,4) = -4/5;
+    (*allocation_matrix)(1,4) = -(4*pow(3,0.5)/5);
+    (*allocation_matrix)(5,4) = -(8*front_arm_length/5);
 
-    (*allocation_matrix)(0,5) = 8/5;
-    (*allocation_matrix)(4,5) = -(4*front_arm_length)/5;
-    (*allocation_matrix)(5,5) = -(4*pow(3,0.5)*front_arm_length/5);
+    (*allocation_matrix)(2,5) = 8/5;
+    (*allocation_matrix)(3,5) = -(4*front_arm_length)/5;
+    (*allocation_matrix)(4,5) = -(4*pow(3,0.5)*front_arm_length/5);
 
     (*allocation_matrix)(1,6) = 8/5;
-    (*allocation_matrix)(3,6) = 0; //almost zero
-    (*allocation_matrix)(5,6) = -(8*back_arm_length/5);
+    (*allocation_matrix)(3,6) = -(8*back_arm_length/5);
 
-    (*allocation_matrix)(0,7) = 0; //almost zero
-    (*allocation_matrix)(2,7) = 8/5;
-    (*allocation_matrix)(4,7) = 1.6*back_arm_length;
+    (*allocation_matrix)(0,7) = 8/5;
+    (*allocation_matrix)(4,7) = 8/5*back_arm_length;
 
 
     (*allocation_matrix) *= rotor_force_constant;
