@@ -13,7 +13,7 @@ namespace rotors_control {
 
     void GriffinController::InitializeParameters() {
 
-        calculateAllocation(&(controller_parameters_.allocation_matrix_), vehicle_parameters_);
+        calculateAllocation(&(controller_parameters_.allocation_matrix_));
         Allocation_Matrix_PseudoInverse = controller_parameters_.allocation_matrix_.transpose()
                                                           * ((controller_parameters_.allocation_matrix_ * controller_parameters_.allocation_matrix_.transpose()).inverse()); // A^{ \dagger} = A^T*(A*A^T)^{-1}
 

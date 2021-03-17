@@ -30,23 +30,23 @@
   <xacro:property name="use_mesh_file_core" value="true"/>
   <xacro:property name="use_mesh_file_rotor_unit" value="true"/>
   <xacro:property name="mesh_file_core" value="package://rotors_description/meshes/omav/griffin_base.stl"/>
-  <xacro:property name="mesh_file_core_collision" value="package://rotors_description/meshes/omav/griffin_base.stl"/>
+  <xacro:property name="mesh_file_core_collision" value="package://rotors_description/meshes/omav/griffin_base.stl"/> //TODO what is this for
   <xacro:property name="mesh_file_tilt_unit" value="package://rotors_description/meshes/omav/griffin_tilt_unit.stl"/>
 
-  <xacro:property name="mass_core" value="6.57"/>    <!-- [kg] -->
+  <xacro:property name="mass_core" value="6.57"/>    <!-- [kg] --> //TODO evtl kleiner
   <xacro:property name="mass_tilt_unit" value="0.33"/>    <!-- [kg] -->
-  <xacro:property name="body_width" value="0.22"/>    <!-- [m] TODO -->
-  <xacro:property name="body_height" value="0.666"/>    <!-- [m] TODO -->
+  <xacro:property name="body_width" value="0.8"/>    <!-- [m]  -->
+  <xacro:property name="body_height" value="1.2"/>    <!-- [m]  -->
   <xacro:property name="mass_rotor" value="0.045"/>    <!-- [kg] -->
-  <xacro:property name="arm_length_front" value="0.35"/> <!-- [m] -->
-  <xacro:property name="arm_length_back" value="0.595"/> <!-- [m] -->
+  <xacro:property name="arm_length_front" value="0.4"/> <!-- [m] -->
+  <xacro:property name="arm_length_back" value="0.6"/> <!-- [m] -->
   <xacro:property name="rotor_offset_top" value="0.0445"/>    <!-- [m] -->
-  <xacro:property name="radius_rotor" value="${0.406/2}"/>    <!-- 12 in [m] -->
+  <xacro:property name="radius_rotor" value="${0.406/2}"/>    <!-- 16 in props/2 [m] -->
   <xacro:property name="mass_tilt_unit_back" value="0.32"/> <!-- [kg] -->
 
   <xacro:property name="tilt_unit_parent" value="${namespace}/base_link_inertia"/>    <!-- 12 in [m] -->
   <xacro:property name="body_origin">
-    <origin xyz="0 0 0" rpy="${mounting_roll} 0 0" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
   </xacro:property>
 
   <xacro:property name="sin30" value="0.5"/>
@@ -145,7 +145,7 @@
           lower_start_index="${num_rotor_groups}"
           mesh="propeller"
           mesh_tilt_unit="${mesh_file_tilt_unit}"
-          color="Orange">
+          color="Black">
     <origin xyz="-${arm_length_front*cos30} -${arm_length_front*sin30} 0" rpy="0 0 -2.61799387799"/>
     <xacro:insert_block name="rotor_inertia" />
   </xacro:double_tilt_unit_minimal>
@@ -163,7 +163,7 @@
           lower_start_index="${num_rotor_groups}"
           mesh="propeller"
           mesh_tilt_unit="${mesh_file_tilt_unit}"
-          color="DarkGrey">
+          color="Orange">
     <origin xyz="0 0 ${arm_length_back}" rpy="0 -1.57079632679 0"/>
     <xacro:insert_block name="rotor_inertia" />
   </xacro:double_tilt_unit_minimal>

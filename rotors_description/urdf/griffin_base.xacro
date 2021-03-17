@@ -3,19 +3,8 @@
 <robot name="$(arg mav_name)" xmlns:xacro="http://ros.org/wiki/xacro">
     <xacro:include filename="$(find rotors_description)/urdf/component_snippets.xacro"/>
 
-    <xacro:property name="mounting_roll" value="$(arg model_roll)" />
-
     <!-- Instantiate OMAV "mechanics". -->
     <xacro:include filename="$(find rotors_description)/urdf/griffin.xacro"/>
-    <!-- Add manipulator. -->
-    <xacro:if value="$(arg add_manipulator)">
-        <xacro:property name="robot_name" value="delta" />
-        <xacro:property name="delta_namespace" value="delta" />
-        <xacro:property name="mounting_link" value="$(arg mav_name)/base_link" />
-        <xacro:property name="height_offset" value="0.073" />
-        <xacro:include filename="$(find rotors_description)/urdf/delta_manipulator.xacro" />
-        <xacro:include filename="$(find rotors_description)/urdf/delta_actuators.xacro" />
-    </xacro:if>
 
     <xacro:include filename="$(find rotors_description)/urdf/griffin_actuators.xacro" />
 
@@ -53,16 +42,6 @@
                 bag_file="$(arg log_file)"
                 rotor_velocity_slowdown_sim="${rotor_velocity_slowdown_sim}"
                 wait_to_record_bag="$(arg wait_to_record_bag)"/>
-    </xacro:if>
-
-    <xacro:if value="$(arg add_rgbd_sensor)">
-        <!-- Add a RGB-D sensor -->
-        <xacro:include filename="$(find rotors_description)/urdf/pmd_monstar.xacro"/>
-        <joint name="$(arg mav_name)/tof_cam_optical_frame" type="fixed">
-            <origin xyz="0.09 0.0 0.15" rpy="-1.309 0 -1.571"/>
-            <parent link="$(arg mav_name)/base_link_inertia" />
-            <child link="rgbd_camera/base_link" />
-        </joint>
     </xacro:if>
 
     <!-- Add odometry. -->

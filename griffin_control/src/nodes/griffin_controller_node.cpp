@@ -94,19 +94,19 @@ namespace rotors_control {
     }
 
     void GriffinControllerNode::MultiDofJointTrajectoryCallback(
-            const trajectory_msgs::MultiDOFJointTrajectoryConstPtr& msg) { //listens for trajectory with poses, twists, acceleraeions from a tajectory generator
+            const trajectory_msgs::MultiDOFJointTrajectoryConstPtr& msg) { //listens for trajectory with poses, twists, accelerations from a trajectory generator
 
         // Clear all pending commands.
         command_timer_.stop();
         commands_.clear();
         command_waiting_times_.clear();
 
-        const size_t n_commands = msg->points.size();
-
         if(n_commands < 1){
             ROS_WARN_STREAM("Got MultiDOFJointTrajectory message, but message has no points.");
             return;
         }
+
+        const size_t n_commands = msg->points.size();
 
         mav_msgs::EigenTrajectoryPoint eigen_reference;
         mav_msgs::eigenTrajectoryPointFromMsg(msg->points.front(), &eigen_reference);
@@ -133,7 +133,7 @@ namespace rotors_control {
         }
     }
 
-    void GriffinControllerNode::TimedCommandCallback(const ros::TimerEvent& e) {
+    void GriffinControllerNode::TimedCommandCallback(const ros::TimerEvent& e) { //TODO: doesnt understand this
 
         if(commands_.empty()){
             ROS_WARN("Commands empty, this should not happen here");
@@ -165,17 +165,15 @@ namespace rotors_control {
 
         mav_msgs::ActuatorsPtr actuator_msg(new mav_msgs::Actuators);
 
-        actuator_msg->angular_velocities.clear(); //TODO motors from 0-7,servos 8-11
-        for (int i = 0; i < 3; i++)
+        actuator_msg->angular_velocities.clear(); //motors from 0-7,servos 8-11
+        for (int i = 0; i < 4; i++)
+            actuator_msg->angular_velocities.push_back(ref_rotor_outputs[i]); //TODO does this work
+        for (int i = 0; i < 4; i++)
             actuator_msg->angular_velocities.push_back(ref_rotor_outputs[i]);
-        for (int i = 0; i < 3; i++)
-            actuator_msg->angular_velocities.push_back(ref_rotor_outputs[i]);
-        ROS_INFO_ONCE("First rotor output");
 
-
-        for(int i= 0; i < 7; i++)
+        for(int i= 0; i < 8; i++)
             actuator_msg->angles.push_back(0);
-        for (int i = 7; i < 11; i++)
+        for (int i = 8; i < 12; i++)
             actuator_msg->angles.push_back(ref_rotor_outputs[i]);
         actuator_msg->header.stamp = odometry_msg->header.stamp;
 
