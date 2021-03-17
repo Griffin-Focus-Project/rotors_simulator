@@ -46,7 +46,7 @@
 
   <xacro:property name="tilt_unit_parent" value="${namespace}/base_link_inertia"/>    <!-- 12 in [m] -->
   <xacro:property name="body_origin">
-    <origin xyz="0 0 0" rpy="0 0 0" />
+    <origin xyz="0 0 0.121" rpy="0 0 0" />
   </xacro:property>
 
   <xacro:property name="sin30" value="0.5"/>
@@ -66,7 +66,7 @@
   <!-- Body Interia / CoM Offset -->
   <xacro:property name="body_inertia_origin">
     <!-- <origin xyz="0.03 0 0.01" /> -->
-    <origin xyz="-0.0024 -0.0035 0.121" /> <!-- [m] -->
+    <origin xyz="0 0 0" /> <!-- [m] -->
   </xacro:property>
 
   <!-- Rotor unit inertia without the propellor. -->
@@ -114,6 +114,9 @@
     <xacro:insert_block name="rotor_inertia" />
   </xacro:double_tilt_unit_minimal>
 
+
+
+
   <!-- front1 -->
   <xacro:double_tilt_unit_minimal
           robot_namespace="${namespace}"
@@ -128,7 +131,7 @@
           mesh="propeller"
           mesh_tilt_unit="${mesh_file_tilt_unit}"
           color="Black">
-    <origin xyz="${arm_length_front*cos30} -${arm_length_front*sin30} 0" rpy="0 0 -0.52359877559"/>
+    <origin xyz="-${arm_length_front*cos30} -${arm_length_front*sin30} 0" rpy="0 0 -2.61799387799"/>
     <xacro:insert_block name="rotor_inertia" />
   </xacro:double_tilt_unit_minimal>
 
@@ -146,7 +149,7 @@
           mesh="propeller"
           mesh_tilt_unit="${mesh_file_tilt_unit}"
           color="Black">
-    <origin xyz="-${arm_length_front*cos30} -${arm_length_front*sin30} 0" rpy="0 0 -2.61799387799"/>
+    <origin xyz="${arm_length_front*cos30} -${arm_length_front*sin30} 0" rpy="0 0 -0.52359877559"/>
     <xacro:insert_block name="rotor_inertia" />
   </xacro:double_tilt_unit_minimal>
 
