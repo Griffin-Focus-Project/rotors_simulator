@@ -533,7 +533,7 @@
 
   <!-- Tilting double rotor unit link and joint. -->
   <xacro:macro name="double_tilt_unit_minimal"
-    params="robot_namespace direction_upper direction_lower parent mass_rotor mass_tilt_unit rotor_offset_top motor_number lower_start_index color mesh mesh_tilt_unit *origin *inertia">
+    params="robot_namespace direction_upper direction_lower parent mass_rotor mass_tilt_unit rotor_offset_top motor_number lower_start_index color mesh mesh_tilt_unit *origin *rotor_inertia *inertia">
 
     <!-- Rotor tilt_unit -->
     <joint name="${robot_namespace}/tilt_unit_${motor_number}_revolutejoint" type="continuous">
@@ -580,7 +580,7 @@
     <link name="rotor_${motor_number}">
       <inertial>
         <mass value="${mass_rotor}" /> <!-- [kg] -->
-        <xacro:insert_block name="inertia" />
+        <xacro:insert_block name="rotor_inertia" />
       </inertial>
       <visual>
         <geometry>
