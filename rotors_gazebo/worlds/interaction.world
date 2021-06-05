@@ -14,8 +14,8 @@
       <pose frame=''>0 0 -0.055 0 0 0</pose>
     </include>
 
-   <model name='unit_box'>
-    <static>1</static>
+    <model name='unit_box'>
+      <static>1</static>
       <pose frame=''>-2.5 0 1 0 0 0</pose>
       <link name='link'>
         <inertial>
@@ -68,6 +68,8 @@
         <kinematic>0</kinematic>
       </link>
     </model>
+
+    <plugin name='gazebo_octomap' filename='librotors_gazebo_octomap_plugin.so'/>
 
     <!-- Only one ROS interface plugin is required per world, as any other plugin can connect a Gazebo
          topic to a ROS topic (or vise versa). -->
