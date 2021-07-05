@@ -410,7 +410,7 @@
   <population name="cylinder_population_floor">
    <model name='cylinder_r'>
      <link name='link_0'>
-       <pose frame=''>1.0 0 0.1 0 0 0</pose>
+       <pose frame=''>1.0 0 0.04 1.57 0 0</pose>
        <inertial>
          <mass>1</mass>
          <inertia>
