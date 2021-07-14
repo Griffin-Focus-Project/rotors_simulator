@@ -73,7 +73,7 @@
 <!-- First cylinder on Shelf 1: Side graspable -->
    <model name='cylinder_red_shelf'>
      <link name='link_0'>
-       <pose frame=''>-1.8 -1.6 1.6 0 0 0</pose>
+       <pose frame=''>1.0 -1.6 1.6 0 0 0</pose>
        <inertial>
          <mass>1</mass>
          <inertia>
@@ -178,7 +178,7 @@
 <!-- Second cylinder on Shelf 1: Top graspable -->
    <model name='cylinder_red_shelf'>
      <link name='link_0'>
-       <pose frame=''>0 -1.8 1.54 1.57079632679 0 0</pose>
+       <pose frame=''>-1.0 -1.8 1.6 1.57079632679 0 0</pose>
        <inertial>
          <mass>1</mass>
          <inertia>
@@ -280,7 +280,7 @@
      <allow_auto_disable>1</allow_auto_disable>
    </model>
 
-<!-- Shelf 2 with two objects: one side graspable, one not graspable -->
+<!-- Shelf 2 with three objects: one side graspable, one not graspable -->
    <model name='unit_box'>
     <static>1</static>
       <pose frame=''>0 2.0 0.75 0 0 1.57079632679</pose>
@@ -339,7 +339,7 @@
 <!-- First cylinder on Shelf 2: Side graspable -->
    <model name='cylinder_red_shelf'>
      <link name='link_0'>
-       <pose frame=''>1.8 1.6 1.6 0 0 0</pose>
+       <pose frame=''>1.0 1.6 1.6 0 0 0</pose>
        <inertial>
          <mass>1</mass>
          <inertia>
@@ -444,7 +444,7 @@
 <!-- Second cylinder on Shelf 2: Not graspable -->
    <model name='cylinder_red_shelf'>
      <link name='link_0'>
-       <pose frame=''>-1.7 1.9 1.6 0 0 0</pose>
+       <pose frame=''>-1.0 1.9 1.6 0 0 0</pose>
        <inertial>
          <mass>1</mass>
          <inertia>
@@ -545,7 +545,6 @@
      <static>1</static>
      <allow_auto_disable>1</allow_auto_disable>
    </model>
-
 
 <!-- Cylinders on Floor: 5 graspable cylinders, 2 not graspable cylinders -->
  
@@ -657,7 +656,7 @@
  <!-- Graspable Cylinder 2 -->
    <model name='cylinder_red_floor'>
      <link name='link_0'>
-       <pose frame=''>2.0 0.5 0.04 1.57079632679 0 0</pose>
+       <pose frame=''>1.0 0.5 0.04 1.57079632679 0 0</pose>
        <inertial>
          <mass>1</mass>
          <inertia>
@@ -762,7 +761,7 @@
  <!-- Graspable Cylinder 3 -->
    <model name='cylinder_red_floor'>
      <link name='link_0'>
-       <pose frame=''>1.5 -0.5 0.04 1.57079632679 0 0</pose>
+       <pose frame=''>1.5 0 0.04 1.57079632679 0 0</pose>
        <inertial>
          <mass>1</mass>
          <inertia>
@@ -972,7 +971,7 @@
  <!-- Graspable Cylinder 5 -->
    <model name='cylinder_red_floor'>
      <link name='link_0'>
-       <pose frame=''>-1.5 0.5 0.04 1.57079632679 0 0</pose>
+       <pose frame=''>-1.0 0.5 0.04 1.57079632679 0 0</pose>
        <inertial>
          <mass>1</mass>
          <inertia>
@@ -1074,10 +1073,10 @@
      <allow_auto_disable>1</allow_auto_disable>
    </model>
 
- <!-- Not Graspable Cylinder 1 -->
+ <!-- Graspable Cylinder 1 -->
    <model name='cylinder_red_floor'>
      <link name='link_0'>
-       <pose frame=''>1.4 1.3 0.1 0 0 0</pose>
+       <pose frame=''>1.0 0 0.04 1.57079632679 0 0</pose>
        <inertial>
          <mass>1</mass>
          <inertia>
@@ -1179,10 +1178,10 @@
      <allow_auto_disable>1</allow_auto_disable>
    </model>
 
- <!-- Not Graspable Cylinder 2 -->
+ <!-- Graspable Cylinder 1 -->
    <model name='cylinder_red_floor'>
      <link name='link_0'>
-       <pose frame=''>-1.4 -0.8 0.1 0 0 0</pose>
+       <pose frame=''>1.0 0 0.04 1.57079632679 0 0</pose>
        <inertial>
          <mass>1</mass>
          <inertia>
