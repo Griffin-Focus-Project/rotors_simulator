@@ -17,7 +17,7 @@
 <!-- Shelf 1 with two objects: one top graspable, other side graspable -->
    <model name='unit_box'>
     <static>1</static>
-      <pose frame=''>0 -2.0 0.75 0 0 1.57079632679</pose>
+      <pose frame=''>-2.0 0.0 0.75 0 0 0</pose>
       <link name='link'>
         <inertial>
           <mass>1</mass>
@@ -73,7 +73,7 @@
 <!-- First cylinder on Shelf 1: Side graspable -->
    <model name='cylinder_red_shelf'>
      <link name='link_0'>
-       <pose frame=''>-1.8 -1.6 1.6 0 0 0</pose>
+       <pose frame=''>-1.6 -1.8 1.6 0 0 0</pose>
        <inertial>
          <mass>1</mass>
          <inertia>
@@ -178,7 +178,7 @@
 <!-- Second cylinder on Shelf 1: Top graspable -->
    <model name='cylinder_red_shelf'>
      <link name='link_0'>
-       <pose frame=''>0 -1.8 1.54 1.57079632679 0 0</pose>
+       <pose frame=''>-1.8 0 1.54 1.57079632679 0 0</pose>
        <inertial>
          <mass>1</mass>
          <inertia>
