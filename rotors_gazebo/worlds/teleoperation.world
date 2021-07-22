@@ -16,7 +16,7 @@
     </light>
     <model name='unit_box'>
       <static>1</static>
-      <pose frame=''>-3 3 3 0 -0 0</pose>
+      <pose frame=''>-3 -3 3 0 -0 0</pose>
       <link name='link'>
         <inertial>
           <mass>1</mass>
@@ -50,7 +50,7 @@
     </model>
     <model name='unit_box1'>
       <static>1</static>
-      <pose frame=''>3 3 3 0 -0 0</pose>
+      <pose frame=''>3 -3 3 0 -0 0</pose>
       <link name='link'>
         <inertial>
           <mass>1</mass>
@@ -168,7 +168,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose frame=''>0 0 0 0 -0 0</pose>
+      <pose frame=''>0 0 0 0 -0 3.14159</pose>
     </model>
     <gui fullscreen='0'>
       <camera name='user_camera'>
@@ -200,7 +200,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose frame=''>0 7 7 1.573 3.14159 0</pose>
+      <pose frame=''>0 -7 7 -1.573 0 0</pose>
     </model>
     <model name='texture_wall_0'>
       <static>1</static>
@@ -225,7 +225,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose frame=''>-7 0 7 0 1.573 0</pose>
+      <pose frame=''>7 0 7 00 1.573 3.141590</pose>
     </model>
   </world>
 </sdf>
